@@ -1,10 +1,16 @@
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { ReactNode } from "react";
 
-const MaxWidthContainer = () => {
+const MaxWidthContainer = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: ReactNode;
+}) => {
   return (
-    <div className={cn("min-w-[1440px] flex justify-center")}>
-      MaxWidthContainer
+    <div className={cn("mx-auto w-full max-w-screen-[1440px]", className)}>
+      {children}
     </div>
   );
 };
