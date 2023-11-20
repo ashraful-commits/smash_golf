@@ -12,9 +12,9 @@ export type UpcomingGameProps = {
   username: string;
   time: string;
   gameImg: StaticImageData | string;
-  entry: number;
+  entry: string;
   reward: string;
-  entryNum: number;
+  entryNum: string;
   styles: Record<string, string>;
   title: string;
 };
