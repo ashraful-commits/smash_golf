@@ -4,6 +4,7 @@ import upcomingGameBg from "@/public/upcomingGamebackgorund.png";
 
 import Image from "next/image";
 import { Button } from "./ui/button";
+import { UpcomingGameProps } from "@/Types";
 
 const UpcomingGame = ({
   hostImg,
