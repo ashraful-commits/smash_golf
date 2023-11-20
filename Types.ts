@@ -11,7 +11,7 @@ export type UpcomingGameProps = {
   hostImg: StaticImageData | string;
   username: string;
   time: string;
-  gameImg: string;
+  gameImg: StaticImageData | string;
   entry: number;
   reward: string;
   entryNum: number;
