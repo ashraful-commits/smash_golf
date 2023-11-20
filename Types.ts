@@ -1,4 +1,6 @@
-export type NavItemType = {
-  path: string;
-  name: string;
+export type NavItemProps = {
+  NavItems: {
+    path: string;
+    name: string;
+  }[];
 };

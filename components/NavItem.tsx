@@ -1,13 +1,13 @@
 "use client";
-
+import { NavItemProps } from "@/Types";
 import React, { useState } from "react";
 
-const NavItem = ({ NavItems }) => {
+const NavItem = ({ NavItems }: NavItemProps[]) => {
   const [active, setActive] = useState<null | string>("/");
 
   return (
     <ul className="flex gap-x-[26px]">
-      {NavItems.map((item: Object, i: number) => {
+      {NavItems.map((item, i) => {
         return (
           <li
             key={i}
