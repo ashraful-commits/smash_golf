@@ -2,7 +2,7 @@
 import { NavItemType } from "@/Types";
 import React, { useState } from "react";
 
-const NavItem = ({ NavItems }: NavItemType) => {
+const NavItem = ({ NavItems}) => {
   const [active, setActive] = useState<null | string>("/");
 
   return (

@@ -3,10 +3,9 @@ import MaxWidthContainer from "./MaxWidthContainer";
 import logo from "@/public/Logo.png";
 import Image from "next/image";
 
-import { NavItemType } from "@/Types";
 import NavItem from "./NavItem";
 const Navbar = () => {
-  const NavItems: NavItemType[] = [
+  const NavItems = [
     {
       path: "/",
       name: "Home",
