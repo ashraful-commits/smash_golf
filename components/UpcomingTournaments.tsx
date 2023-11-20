@@ -9,7 +9,7 @@ import UpcomingGame from "./UpcomingGame";
 import gameImg from "@/public/gameImg.png";
 import gameImg1 from "@/public/gameImg1.png";
 import gameImg2 from "@/public/gameImg2.png";
-import hostImg from "@/public/hostImg.png";
+import hostImg from "@/public/HostImg.png";
 const UpcomingTournaments = () => {
   return (
     <MaxWidthContainer className="min-h-1093px  overflow-hidden z-0 ">
