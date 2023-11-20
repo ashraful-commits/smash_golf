@@ -15,7 +15,7 @@ const UpcomingGame = ({
   entryNum,
   styles,
   title,
-}) => {
+}: UpcomingGameProps) => {
   return (
     <MaxWidthContainer className="w-[400px] h-[537px] rounded-[30px]  border-[1px] border-[#000] shadow backdrop-blur-[25px]">
       <Image
