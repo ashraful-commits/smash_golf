@@ -15,6 +15,6 @@ export type UpcomingGameProps = {
   entry: string;
   reward: string;
   entryNum: string | number;
-  styles: Record<string, string>;
+  styles: string;
   title: string;
 };
