@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type NavItemProps = {
   NavItems: {
     path: string;
@@ -6,7 +8,7 @@ export type NavItemProps = {
 };
 
 export type UpcomingGameProps = {
-  hostImg: string;
+  hostImg: StaticImageData | string;
   username: string;
   time: string;
   gameImg: string;
