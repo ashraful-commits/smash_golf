@@ -18,3 +18,16 @@ export type UpcomingGameProps = {
   styles: string;
   title: string;
 };
+export type howItWork = {
+  cardImg: StaticImageData | string;
+  desc: string;
+  bgImg: StaticImageData | string;
+
+  title: string;
+};
+export type TourCard = {
+  svg: string;
+  desc: string;
+
+  title: string;
+};
