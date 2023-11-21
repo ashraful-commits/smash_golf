@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const NavItem = ({ NavItems }: NavItemProps) => {
   const [active, setActive] = useState<null | string>("/");
-  console.log(active);
+
   return (
     <ul className="flex gap-x-[26px]">
       {NavItems.map((item, i) => {
