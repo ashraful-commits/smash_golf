@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { ReactNode } from "react";
 
 export type NavItemProps = {
   NavItems: {
@@ -26,7 +27,7 @@ export type howItWork = {
   title: string;
 };
 export type TourCard = {
-  svg: string;
+  svg: ReactNode;
   desc: string;
 
   title: string;
