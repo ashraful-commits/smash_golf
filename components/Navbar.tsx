@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import MaxWidthContainer from "./MaxWidthContainer";
 import logo from "@/public/Logo.png";
 import Image from "next/image";
@@ -31,9 +32,35 @@ const Navbar = () => {
       name: "register",
     },
   ];
+  //==============================
+  const [scrollY, setScrollY] = useState(0);
+  const [stickyHeader, setStickyHeader] = useState(35);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  useEffect(() => {
+    if (scrollY > 0) {
+      setStickyHeader(0);
+    } else {
+      setStickyHeader(35);
+    }
+  }, [scrollY]);
   return (
-    <div className=" bg-transparent sticky z-[99999] px-[100px] top-[35px] left-0  h-[98px]">
-      <MaxWidthContainer className="flex justify-between items-center">
+    <div
+      className={` bg-transparent transition-all duration-500 ease-in-out sticky z-[99999] px-[100px] top-[${stickyHeader}px] left-0  h-[98px] ${
+        stickyHeader === 0 ? "bg-gray-900 bg-opacity-90" : ""
+      }`}
+    >
+      <MaxWidthContainer className={`flex justify-between items-center `}>
         <div className="logo w-[105px] h-[98px] shrink-0  ">
           <Image className="w-full h-full object-cover" src={logo} alt="logo" />
         </div>
