@@ -22,7 +22,7 @@ const HowItWorkCard = ({ cardImg, title, desc, bgImg }: howItWork) => {
             alt=""
           />
           <Image className="absolute z-[40] " src={cardImg} alt="" />
-          <Image className="absolute z-[50] " src={bgImg} alt="" />
+          <Image className="absolute z-[50] " src={bgImg || ""} alt="" />
           <CardHeader className="absolute -bottom-5 z-[70] text-white text-[60px] font-[400] font-['Russo_one'] leading-[95.5%] tracking-[-2.4px] capitalize">
             {title}
           </CardHeader>
