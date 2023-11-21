@@ -1,9 +1,10 @@
 "use client";
 import { NavItemProps } from "@/Types";
 import React, { useState } from "react";
-
+import { usePathname } from "next/navigation";
 const NavItem = ({ NavItems }: NavItemProps) => {
   const [active, setActive] = useState<null | string>("/");
+  const pathName = usePathname();
 
   return (
     <ul className="flex gap-x-[26px]">
@@ -29,7 +30,7 @@ const NavItem = ({ NavItems }: NavItemProps) => {
                   item.name === "register"
                     ? "text-[15.79px] font-[700] capitalize"
                     : "text-[18.424px]  inline-block capitalize  font-[400] font-['Russo_one']"
-                } ${active === item.path ? "text-blue-500" : "text-white"} ${
+                } ${item.path === pathName ? "text-blue-500" : "text-white"} ${
                   item.name === "register" ? "text-white " : ""
                 }`}
               >
