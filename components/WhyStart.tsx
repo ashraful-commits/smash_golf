@@ -39,7 +39,7 @@ const WhyStart = () => {
         />
       </div>
 
-      <div className="left w-[55%] relative z-[30] flex flex-col items-start pl-2 pt-[80px]">
+      <div className="left w-[55%] relative z-[60] flex flex-col items-start pl-2 pt-[80px]">
         <h5 className="text-[24px] font-[400] font-['Russo_one'] leading-[95.5%] capitalize text-white mt-[0px]">
           wHY DID WE START THE
         </h5>
@@ -57,7 +57,7 @@ const WhyStart = () => {
           with for decades...How do we make golf inviting, fair and accessible
           to everyone?
         </p>
-        <div className="w-full mt-[25px] flex flex-col gap-y-[25px]"></div>
+        <div className="w-full mt-[25px] flex flex-col gap-y-[25px] "></div>
         <Button className="w-[190px] mt-[12px] h-[50px] bg-[#3f83f8] shrink-0 text-[15.42px] font-[400] leading-[111.5%] font-['Russo_one'] uppercase">
           Get started
         </Button>
