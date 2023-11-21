@@ -47,17 +47,17 @@ const Tour = () => {
           WHAT IS THE SMASH GOLF TOUR?
         </h5>
         <h2 className=" text-start mt-5 font-['Russo_one'] font-[400] leading-[120%] uppercase bg-clip-text bg-gradient-to-b from-[#ffa500] to-[#b87802] text-[45px] text-transparent  tracking-[-1.8px] ">
-          HOME OF GOLF'S NON- TRADITIONAL CHAMPIONS
+          HOME OF GOLF &apos;S NON- TRADITIONAL CHAMPIONS
         </h2>
         <p className="text-[18px]  mt-[20px] w-[85%] text-start font-[400] leading-[146%] tracking-[-.36px] text-white ">
           Smash Golf Tour (SGT) is the first ever virtual tour Powered by
-          Toptracer Range hosted on Smashers On App. Play and perform on golf's
-          most iconic courses while competing against friends and fellow golfers
-          all over America.
+          Toptracer Range hosted on Smashers On App. Play and perform on golf
+          &apos;s most iconic courses while competing against friends and fellow
+          golfers all over America.
           <br />
           <br />
-          If you're the most non-traditional player or a purist, Smash Golf Tour
-          is available to all golfers and here is why:
+          If you&apos;re the most non-traditional player or a purist, Smash Golf
+          Tour is available to all golfers and here is why:
         </p>
         <div className="w-full mt-[25px] flex flex-col gap-y-[25px]">
           <TourCard

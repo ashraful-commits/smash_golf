@@ -49,13 +49,13 @@ const WhyStart = () => {
         <p className="text-[18px] w-[504px]  mt-[25px]  text-start font-[400] leading-[146%] tracking-[-.36px] text-white ">
           Traditionally, golf has been a hard game to get into for large
           segments of the community. There are tons of barriers that keep people
-          from ever trying the game. It's expensive, intimidating, and
+          from ever trying the game. It &apos;s expensive, intimidating, and
           difficult.
           <br />
           <br />
-          We've cracked the code that the golf industry has been wrestling with
-          for decades...How do we make golf inviting, fair and accessible to
-          everyone?
+          We &apos;ve cracked the code that the golf industry has been wrestling
+          with for decades...How do we make golf inviting, fair and accessible
+          to everyone?
         </p>
         <div className="w-full mt-[25px] flex flex-col gap-y-[25px]"></div>
         <Button className="w-[190px] mt-[12px] h-[50px] bg-[#3f83f8] shrink-0 text-[15.42px] font-[400] leading-[111.5%] font-['Russo_one'] uppercase">
