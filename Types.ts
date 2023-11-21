@@ -32,3 +32,6 @@ export type TourCard = {
 
   title: string;
 };
+export type liveEvent = {
+  liveEventBanner: string | StaticImageData;
+};
