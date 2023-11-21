@@ -33,7 +33,7 @@ const HowItWork = () => {
         <HowItWorkCard
           cardImg={cardImg3}
           bgImg={cardImg4}
-          title="Win"
+          title="Win!"
           desc="Earn  Gold and convert them to cash and product prizes by competing in our tournaments."
         />
       </div>

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const NavItem = ({ NavItems }: NavItemProps) => {
   const [active, setActive] = useState<null | string>("/");
-
+  console.log(active);
   return (
     <ul className="flex gap-x-[26px]">
       {NavItems.map((item, i) => {
@@ -28,8 +28,8 @@ const NavItem = ({ NavItems }: NavItemProps) => {
                 className={` ${
                   item.name === "register"
                     ? "text-[15.79px] font-[700] capitalize"
-                    : "text-[18.424px]  inline-block capitalize text-white font-[400] font-['Russo_one']"
-                } ${active === item.path ? "text-blue-500" : ""} ${
+                    : "text-[18.424px]  inline-block capitalize  font-[400] font-['Russo_one']"
+                } ${active === item.path ? "text-blue-500" : "text-white"} ${
                   item.name === "register" ? "text-white " : ""
                 }`}
               >
