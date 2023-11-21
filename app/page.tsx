@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import HosttestBrands from "@/components/HosttestBrands";
 import HowItWork from "@/components/HowItWork";
 import HowToPlay from "@/components/HowToPlay";
 import LiveEvent from "@/components/LiveEvent";
@@ -19,6 +20,7 @@ export default function Home() {
         <div className="bg-black h-[110px] w-full"></div>
         <HowToPlay />
         <LiveEvent />
+        <HosttestBrands />
       </div>
     </MaxWidthContainer>
   );

@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Smash golf tour",
   description: "play. compete. win",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <main className="relative flex flex-col m-auto min-h-screen max-w-[1440px]">
           <Navbar />
           <div className="flex-grow flex-1">{children}</div>
+        <Footer/>
         </main>
       </body>
     </html>
