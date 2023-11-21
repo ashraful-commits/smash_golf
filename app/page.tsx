@@ -1,5 +1,7 @@
 import Hero from "@/components/Hero";
 import HowItWork from "@/components/HowItWork";
+import HowToPlay from "@/components/HowToPlay";
+import LiveEvent from "@/components/LiveEvent";
 import MaxWidthContainer from "@/components/MaxWidthContainer";
 import Tour from "@/components/Tour";
 import UpcomingTournaments from "@/components/UpcomingTournaments";
@@ -14,6 +16,9 @@ export default function Home() {
         <HowItWork />
         <Tour />
         <WhyStart />
+        <div className="bg-black h-[110px] w-full"></div>
+        <HowToPlay />
+        <LiveEvent />
       </div>
     </MaxWidthContainer>
   );

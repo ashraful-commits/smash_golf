@@ -33,20 +33,20 @@ const WhyStart = () => {
           alt="overlay top"
         />
         <Image
-          className="absolute object-cover bottom-0 left-0 w-full h-full z-[30]"
+          className="absolute object-cover bottom-0 left-0 w-full h-full z-[50]"
           src={overLayBottom}
           alt="overlay bottom"
         />
       </div>
 
-      <div className="left w-[60%] relative z-[30] flex flex-col items-start pl-2 pt-[80px]">
+      <div className="left w-[55%] relative z-[30] flex flex-col items-start pl-2 pt-[80px]">
         <h5 className="text-[24px] font-[400] font-['Russo_one'] leading-[95.5%] capitalize text-white mt-[0px]">
           wHY DID WE START THE
         </h5>
-        <h2 className=" text-start mt-[10px] font-['Russo_one'] font-[400] leading-[120%] uppercase bg-clip-text bg-gradient-to-b from-[#ffa500] to-[#b87802] text-[70px] text-transparent  tracking-[-1.8px] ">
+        <h2 className=" text-start mt-[15px] font-['Russo_one'] font-[400] leading-[95.5%] uppercase bg-clip-text bg-gradient-to-b from-[#ffa500] to-[#b87802] text-[70px] text-transparent  tracking-[-2.8px] ">
           SMASH GOLF TOUR
         </h2>
-        <p className="text-[18px] w-[504px]  mt-[25px]  text-start font-[400] leading-[146%] tracking-[-.36px] text-white ">
+        <p className="text-[18px] w-[504px]  mt-[30px]  text-start font-[400] leading-[146%] tracking-[-.36px] text-white ">
           Traditionally, golf has been a hard game to get into for large
           segments of the community. There are tons of barriers that keep people
           from ever trying the game. It &apos;s expensive, intimidating, and
@@ -62,12 +62,13 @@ const WhyStart = () => {
           Get started
         </Button>
       </div>
-
-      <Image
-        className=" object-cover w-full h-full z-[20]"
-        src={whyStartPlayer}
-        alt="whyStartbg"
-      />
+      <div className="w-[45%] h-full z-[40] overflow-hidden">
+        <Image
+          className=" object-cover absolute right-10 h-auto w-auto "
+          src={whyStartPlayer}
+          alt="whyStartbg"
+        />
+      </div>
     </MaxWidthContainer>
   );
 };
