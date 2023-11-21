@@ -21,7 +21,7 @@ export type UpcomingGameProps = {
 export type howItWork = {
   cardImg: StaticImageData | string;
   desc: string;
-  bgImg: StaticImageData | string;
+  bgImg?: StaticImageData | string;
 
   title: string;
 };
