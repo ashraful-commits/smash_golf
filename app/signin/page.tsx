@@ -4,12 +4,9 @@ import Toastify from "@/Utility/Toastify";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-type Props = {
-  callbackUrl?: string;
-  error?: string;
-};
+
 import React, { useState } from "react";
-const Login = (props) => {
+const Login = (props:any) => {
   const router = useRouter();
   const [input, setInput] = useState({
     email: "",
