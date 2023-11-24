@@ -1,6 +1,6 @@
 import mongoose, { model } from "mongoose";
 
-const userSchema = new mongoose.Schema(
+const userSchema: any = new mongoose.Schema(
   {
     name: {
       type: String,

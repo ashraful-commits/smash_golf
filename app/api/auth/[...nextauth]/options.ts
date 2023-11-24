@@ -16,7 +16,7 @@ export const options: any = {
         MongoDbConection();
         const { email, password } = credentials;
         console.log(credentials);
-        const user: any = await UserModel.findOne({ email });
+        const user = await UserModel.findOne({ email });
 
         if (user) {
           //   Toastify("Login successful!", "success");
