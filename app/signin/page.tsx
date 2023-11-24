@@ -1,5 +1,5 @@
 "use client";
-import { register } from "@/Utility/Register";
+
 import Toastify from "@/Utility/Toastify";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
@@ -9,7 +9,7 @@ type Props = {
   error?: string;
 };
 import React, { useState } from "react";
-const Login = (props: Props) => {
+const Login = (props) => {
   const router = useRouter();
   const [input, setInput] = useState({
     email: "",
