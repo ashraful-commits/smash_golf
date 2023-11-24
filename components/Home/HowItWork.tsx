@@ -5,7 +5,7 @@ import cardImg1 from "@/public/HowitworkcardIcon.png";
 import cardImg2 from "@/public/HowitworkcardIcon1.png";
 import cardImg3 from "@/public/HowitworkcardIcon2.png";
 import cardImg4 from "@/public/HowitworkcardIcon3.png";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 const HowItWork = () => {
   return (
@@ -37,7 +37,7 @@ const HowItWork = () => {
           desc="Earn  Gold and convert them to cash and product prizes by competing in our tournaments."
         />
       </div>
-      <Button className="w-[190px] h-[50px] bg-[#3f83f8] shrink-0 text-[15.42px] font-[400] leading-[111.5%] font-['Russo_one'] uppercase">
+      <Button className="w-[190px] hover:scale-105 transition-all duration-500 h-[50px] bg-[#3f83f8] shrink-0 text-[15.42px] font-[400] leading-[111.5%] font-['Russo_one'] uppercase">
         LEARN MORE
       </Button>
     </MaxWidthContainer>

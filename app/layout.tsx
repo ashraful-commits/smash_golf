@@ -4,8 +4,12 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+import AuthProvider from "../components/context/AuthProvider";
+
 export const metadata: Metadata = {
   title: "Smash golf tour",
   description: "play. compete. win",
@@ -24,10 +28,22 @@ export default function RootLayout({
           inter.className
         )}
       >
-        <main className="relative flex flex-col m-auto min-h-screen max-w-[1440px]">
-          <Navbar />
-          <div className="flex-grow flex-1">{children}</div>
-        <Footer/>
+        <main className="relative flex flex-col m-auto min-h-screen min-w-[1440px] ">
+          <ToastContainer
+            position="top-right"
+            autoClose={1000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
+          <div className="flex-grow flex-1">
+            <AuthProvider>{children}</AuthProvider>
+          </div>
         </main>
       </body>
     </html>

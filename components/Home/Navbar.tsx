@@ -5,7 +5,14 @@ import logo from "@/public/Logo.png";
 import Image from "next/image";
 
 import NavItem from "./NavItem";
-const Navbar = () => {
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+const Navbar = ({ session }) => {
+  const router = useRouter();
+  if (!session) {
+    router.push("/api/auth/signin");
+  }
   const NavItems = [
     {
       path: "/",
@@ -13,7 +20,7 @@ const Navbar = () => {
     },
     {
       path: "/about",
-      name: "about",
+      name: "About",
     },
     {
       path: "/videos",
@@ -28,8 +35,8 @@ const Navbar = () => {
       name: "contact",
     },
     {
-      path: "/register",
-      name: "register",
+      path: `/${session ? "api/auth/signout" : "register"}`,
+      name: `${session ? "Logout" : "Register"}`,
     },
   ];
   //==============================
@@ -54,21 +61,24 @@ const Navbar = () => {
       setStickyHeader(35);
     }
   }, [scrollY]);
+
   return (
-    <div
-      className={` bg-transparent transition-all duration-500 ease-in-out sticky z-[99999] px-[100px] top-[${stickyHeader}px] left-0  h-[98px] ${
-        stickyHeader === 0 ? "bg-gray-900 bg-opacity-90" : ""
+    <MaxWidthContainer
+      className={`w-[1440px] transition-all sticky duration-500 ease-in-out  z-[9999999] px-[100px] m-auto top-[${stickyHeader}px] left-0  h-[98px] min-w-[1440px] ${
+        stickyHeader === 0 ? "bg-gray-900 bg-opacity-90" : "bg-transparent"
       }`}
     >
-      <MaxWidthContainer className={`flex justify-between items-center `}>
-        <div className="logo w-[105px] h-[98px] shrink-0  ">
+      <MaxWidthContainer
+        className={`flex justify-between items-center m-auto `}
+      >
+        <Link href="/" className="logo w-[105px] h-[98px] shrink-0  ">
           <Image className="w-full h-full object-cover" src={logo} alt="logo" />
-        </div>
+        </Link>
         <div className="menu flex h-full items-end">
           <NavItem NavItems={NavItems} />
         </div>
       </MaxWidthContainer>
-    </div>
+    </MaxWidthContainer>
   );
 };
 

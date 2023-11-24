@@ -4,7 +4,7 @@ import Image from "next/image";
 import logo from "@/public/Logo.png";
 const Footer = () => {
   return (
-    <MaxWidthContainer className="bg-black min-h-[62vh] flex flex-col  items-center">
+    <MaxWidthContainer className="bg-black min-h-[62vh] flex flex-col  items-center max-w-[1440px]">
       <Image
         className="w-[142px] h-[133px] mt-[180px]"
         src={logo}
@@ -14,7 +14,7 @@ const Footer = () => {
         Home of golf’s non-traditional Champions
       </h2>
       <ul className="flex mt-7 gap-[62px]">
-        <li>
+        <li className="transition-all duration-500 ease-in-out hover:scale-110">
           <a
             className="font-['Russo_one'] font-[400] leading-[111.5%] capitalize text-white "
             href=""
@@ -22,7 +22,7 @@ const Footer = () => {
             About
           </a>
         </li>
-        <li>
+        <li className="transition-all duration-500 ease-in-out hover:scale-110">
           <a
             className="font-['Russo_one'] font-[400] leading-[111.5%] capitalize text-white "
             href=""
@@ -30,7 +30,7 @@ const Footer = () => {
             Events
           </a>
         </li>
-        <li>
+        <li className="transition-all duration-500 ease-in-out hover:scale-110">
           <a
             className="font-['Russo_one'] font-[400] leading-[111.5%] capitalize text-white "
             href=""
@@ -38,7 +38,7 @@ const Footer = () => {
             Leaderboards
           </a>
         </li>
-        <li>
+        <li className="transition-all duration-500 ease-in-out hover:scale-110">
           <a
             className="font-['Russo_one'] font-[400] leading-[111.5%] capitalize text-white "
             href=""
@@ -46,7 +46,7 @@ const Footer = () => {
             Videos
           </a>
         </li>
-        <li>
+        <li className="transition-all duration-500 ease-in-out hover:scale-110">
           <a
             className="font-['Russo_one'] font-[400] leading-[111.5%] capitalize text-white "
             href=""

@@ -1,6 +1,6 @@
 import React from "react";
 import MaxWidthContainer from "./MaxWidthContainer";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import whyStartBg from "@/public/whyStartBg.png";
 import whyStartPlayer from "@/public/whystartplayer.png";
 import overLayLeft from "@/public/whyStartOverlay1.png";
@@ -58,7 +58,7 @@ const WhyStart = () => {
           to everyone?
         </p>
         <div className="w-full mt-[25px] flex flex-col gap-y-[25px] "></div>
-        <Button className="w-[190px] mt-[12px] h-[50px] bg-[#3f83f8] shrink-0 text-[15.42px] font-[400] leading-[111.5%] font-['Russo_one'] uppercase">
+        <Button className="w-[190px] hover:scale-105 transition-all duration-500 ease-in-out mt-[12px] h-[50px] bg-[#3f83f8] shrink-0 text-[15.42px] font-[400] leading-[111.5%] font-['Russo_one'] uppercase">
           Get started
         </Button>
       </div>

@@ -1,17 +1,25 @@
-import Hero from "@/components/Hero";
-import HosttestBrands from "@/components/HosttestBrands";
-import HowItWork from "@/components/HowItWork";
-import HowToPlay from "@/components/HowToPlay";
-import LiveEvent from "@/components/LiveEvent";
-import MaxWidthContainer from "@/components/MaxWidthContainer";
-import Tour from "@/components/Tour";
-import UpcomingTournaments from "@/components/UpcomingTournaments";
-import WhyStart from "@/components/WhyStart";
+import Footer from "@/components/Home/Footer";
+import Hero from "@/components/Home/Hero";
+import HosttestBrands from "@/components/Home/HosttestBrands";
+import HowItWork from "@/components/Home/HowItWork";
 
-export default function Home() {
+import HowToPlay from "@/components/Home/HowToPlay";
+import LiveEvent from "@/components/Home/LiveEvent";
+import MaxWidthContainer from "@/components/Home/MaxWidthContainer";
+import Navbar from "@/components/Home/Navbar";
+import Tour from "@/components/Home/Tour";
+import UpcomingTournaments from "@/components/Home/UpcomingTournaments";
+import WhyStart from "@/components/Home/WhyStart";
+import { getServerSession } from "next-auth";
+import { options } from "./api/auth/[...nextauth]/options";
+
+export default async function Home() {
+  const session = await getServerSession(options);
+
   return (
-    <MaxWidthContainer>
-      <div className="mx-auto  text-center flex flex-col items-center max-w-[1440px] min-h-screen">
+    <MaxWidthContainer className="max-w-[1440px] relative">
+      <div className="mx-auto relative  text-center flex flex-col z-0 items-center max-w-[1440px] min-h-screen">
+        <Navbar session={session} />
         <Hero />
         <UpcomingTournaments />
         <HowItWork />
@@ -21,6 +29,7 @@ export default function Home() {
         <HowToPlay />
         <LiveEvent />
         <HosttestBrands />
+        <Footer />
       </div>
     </MaxWidthContainer>
   );

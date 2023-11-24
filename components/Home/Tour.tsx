@@ -1,18 +1,18 @@
 import React from "react";
 import MaxWidthContainer from "./MaxWidthContainer";
-import { Card } from "./ui/card";
+import { Card } from "../ui/card";
 import tourImg from "@/public/tour1.png";
 import tourImg1 from "@/public/tour2.png";
 import tourImg2 from "@/public/tour3.png";
 import tourImg3 from "@/public/tour4.png";
 import Image from "next/image";
 import TourCard from "./TourCard";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 const Tour = () => {
   return (
     <MaxWidthContainer className="w-full min-h-[91vh] bg-black  flex  px-[100px] py-[20px]">
       <div className="left w-[50%] min-h-[500px] h-[630px] mt-7 grid grid-rows-2 grid-flow-col  gap-[10px] pr-[50px] justify-center items-start">
-        <Card className="w-[281px]  h-[308px] shrink-0 rounded-[13.899px] border-[2px] overflow-hidden bg-transparent border-[#A1A1A1]">
+        <Card className="w-[281px]  h-[308px] hover:scale-105 duration-500 transition-all ease-in-out shrink-0 rounded-[13.899px] border-[2px] overflow-hidden bg-transparent border-[#A1A1A1]">
           <Image
             className="w-full h-full object-cover"
             src={tourImg}
@@ -20,21 +20,21 @@ const Tour = () => {
           />
         </Card>
 
-        <Card className="w-[281px]   h-[269px] shrink-0 rounded-[13.899px] border-[2px] overflow-hidden bg-transparent border-[#A1A1A1]">
+        <Card className="w-[281px]   h-[269px] hover:scale-105 duration-500 transition-all ease-in-out shrink-0 rounded-[13.899px] border-[2px] overflow-hidden bg-transparent border-[#A1A1A1]">
           <Image
             className="w-full h-full object-cover"
             src={tourImg2}
             alt="TourImg2"
           />
         </Card>
-        <Card className="w-[281px] mt-[50px] h-[292px] shrink-0 rounded-[13.899px] border-[2px] overflow-hidden bg-transparent border-[#A1A1A1]">
+        <Card className="w-[281px] mt-[50px] h-[292px] hover:scale-105 duration-500 transition-all ease-in-out shrink-0 rounded-[13.899px] border-[2px] overflow-hidden bg-transparent border-[#A1A1A1]">
           <Image
             className="w-full h-full object-cover"
             src={tourImg1}
             alt="TourImg1"
           />
         </Card>
-        <Card className="w-[281px]   mt-[40px]  h-[285px] shrink-0 rounded-[13.899px] border-[2px] overflow-hidden bg-transparent border-[#A1A1A1]">
+        <Card className="w-[281px]   mt-[40px]  h-[285px] hover:scale-105 duration-500 transition-all ease-in-out shrink-0 rounded-[13.899px] border-[2px] overflow-hidden bg-transparent border-[#A1A1A1]">
           <Image
             className="w-full h-full object-cover"
             src={tourImg3}
@@ -216,7 +216,7 @@ const Tour = () => {
             }
           />
         </div>
-        <Button className="w-[190px] mt-[30px] h-[50px] bg-[#3f83f8] shrink-0 text-[15.42px] font-[400] leading-[111.5%] font-['Russo_one'] uppercase">
+        <Button className="w-[190px]  hover:scale-105 transition-all duration-500  mt-[30px] h-[50px] bg-[#3f83f8] shrink-0 text-[15.42px] font-[400] leading-[111.5%] font-['Russo_one'] uppercase">
           learn more
         </Button>
       </div>

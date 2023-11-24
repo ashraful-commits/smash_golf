@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardHeader } from "./ui/card";
+import { Card, CardContent, CardHeader } from "../ui/card";
 import MaxWidthContainer from "./MaxWidthContainer";
 import Image from "next/image";
 import { howItWork } from "@/Types";
@@ -7,7 +7,7 @@ import bgMainImg from "@/public/howItworkCardBg.png";
 const HowItWorkCard = ({ cardImg, title, desc, bgImg }: howItWork) => {
   return (
     <MaxWidthContainer className="w-[340px] bg-black">
-      <Card className="bg-black border-none z-0 w-full">
+      <Card className="bg-black border-none  hover:scale-105 transition-all duration-500 hover:border-[2px] border-gray-100 z-0 w-full">
         <div className="w-[310.600px] h-[310.600px] relative z-10 flex justify-center items-center">
           <div
             style={{
@@ -17,7 +17,7 @@ const HowItWorkCard = ({ cardImg, title, desc, bgImg }: howItWork) => {
             className="  w-full h-full z-30 "
           ></div>
           <Image
-            className="w-full sepia h-full absolute top-0 left-0 z-20"
+            className="w-full  sepia h-full absolute top-0 left-0 z-20"
             src={bgMainImg}
             alt=""
           />

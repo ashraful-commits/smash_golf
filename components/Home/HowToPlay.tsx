@@ -1,6 +1,6 @@
 import React from "react";
 import MaxWidthContainer from "./MaxWidthContainer";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import howtoplayBg from "@/public/howtoplaybg.png";
 import howttoplaymobile from "@/public/howToPlayMobile.png";
 import howtopalyoverlay from "@/public/howtoplayoverlay.png";
@@ -84,7 +84,7 @@ const HowToPlay = () => {
           </div>
         </div>
         <div className="flex mt-6 gap-4">
-          <Button className="w-[175px]  mt-[12px] h-[50px] bg-[#3f83f8] relative  shrink-0 overflow-hidden">
+          <Button className="w-[175px] hover:scale-105 transition-all duration-500 ease-in-out  mt-[12px] h-[50px] bg-[#3f83f8] relative  shrink-0 overflow-hidden">
             <div className="h-full flex items-center w-full ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +143,7 @@ const HowToPlay = () => {
               </div>
             </div>
           </Button>
-          <Button className="w-[175px] mt-[12px]  h-[50px] justify-center items-center bg-[#3f83f8] !p-[5px] shrink-0 overflow-hidden">
+          <Button className="w-[175px] hover:scale-105 transition-all duration-500 ease-in-out mt-[12px]  h-[50px] justify-center items-center bg-[#3f83f8] !p-[5px] shrink-0 overflow-hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="48"

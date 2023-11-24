@@ -3,7 +3,7 @@ import MaxWidthContainer from "./MaxWidthContainer";
 import upcomingGameBg from "@/public/upcomingGamebackgorund.png";
 
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { UpcomingGameProps } from "@/Types";
 
 const UpcomingGame = ({
@@ -18,7 +18,7 @@ const UpcomingGame = ({
   title,
 }: UpcomingGameProps) => {
   return (
-    <MaxWidthContainer className="w-[400px] h-[537px] rounded-[30px]  border-[1px] border-[#000] shadow backdrop-blur-[25px]">
+    <MaxWidthContainer className="w-[400px] hover:scale-105 duration-500 ease-in-out transition-all h-[537px] rounded-[30px]  border-[1px] border-[#000] shadow backdrop-blur-[25px]">
       <Image
         className="absolute top-0 left-0 object-cover"
         src={upcomingGameBg}
