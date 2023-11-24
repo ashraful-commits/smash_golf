@@ -17,7 +17,7 @@ export const options: any = {
         MongoDbConection();
         const { email, password }: any = credentials;
         console.log(credentials);
-        let UserModel: any;
+        
         const user = await UserModel.findOne({ email });
 
         if (user) {
