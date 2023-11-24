@@ -4,7 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import UserModel from "@/model/User";
 import { MongoDbConection } from "@/config/MongodbConection";
 import Toastify from "@/Utility/Toastify";
-export const options:any = {
+export const options: any = {
   providers: [
     CredentialsProvider({
       name: "Email",
@@ -16,10 +16,10 @@ export const options:any = {
         MongoDbConection();
         const { email, password } = credentials;
         console.log(credentials);
-        const user = await UserModel.findOne({ email });
+        const user: any = await UserModel.findOne({ email });
 
         if (user) {
-        //   Toastify("Login successful!", "success");
+          //   Toastify("Login successful!", "success");
           return user;
         } else {
           return null;
