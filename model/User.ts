@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-let UserModel;
+let UserModel: any;
 
 try {
   UserModel = mongoose.model("Smash");
