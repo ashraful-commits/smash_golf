@@ -1,16 +1,18 @@
 "use client";
 import { register } from "@/Utility/Register";
 import Toastify from "@/Utility/Toastify";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-
+type Props = {
+  callbackUrl?: string;
+  error?: string;
+};
 import React, { useState } from "react";
-const Register = () => {
+const Login = (props: Props) => {
   const router = useRouter();
   const [input, setInput] = useState({
-    name: "",
     email: "",
     password: "",
-    confirm_password: "",
   });
   const handleOnchange = (e: any) => {
     setInput((prev: any) => ({
@@ -22,25 +24,20 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      if (!(input.password === input.confirm_password)) {
-        setInput({
-          name: "",
-          email: "",
-          password: "",
-          confirm_password: "",
-        });
-      } else {
-        await register({
-          name: input.name,
-          email: input.email,
-          password: input.password,
-        });
-      }
+      await signIn("credentials", {
+        email: input.email,
+        password: input.password,
+        redirect: true,
+        callbackUrl:
+          props.callbackUrl ??
+          ("http://localhost:3000/" || "https://smash-golf.vercel.app/"),
+      });
+      setInput({
+        email: "",
+        password: "",
+      });
 
       Toastify("Registration successful!", "success");
-
-      // Use router.push for navigation
-      router.push("/login");
     } catch (error) {
       // Handle registration failure, show an error toast, etc.
       Toastify("Registration failed. Please try again.", "error");
@@ -59,22 +56,6 @@ const Register = () => {
             className="mx-auto max-w-lg rounded-lg border-[2px] border-gray-800"
           >
             <div className="flex flex-col gap-4 p-4 md:p-8">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="mb-2 inline-block text-sm text-white sm:text-base"
-                >
-                  Name
-                </label>
-                <input
-                  value={input.name}
-                  onChange={handleOnchange}
-                  type="text"
-                  name="name"
-                  className="w-full rounded  bg-gray-800 px-3 py-2 text-white outline-none ring-indigo-300 transition duration-100 focus:ring"
-                  placeholder="Name"
-                />
-              </div>
               <div>
                 <label
                   htmlFor="email"
@@ -107,22 +88,7 @@ const Register = () => {
                   placeholder="Password"
                 />
               </div>
-              <div>
-                <label
-                  htmlFor="confirm_password"
-                  className="mb-2 inline-block text-sm text-white sm:text-base"
-                >
-                  Confirm password
-                </label>
-                <input
-                  value={input.confirm_password}
-                  onChange={handleOnchange}
-                  name="confirm_password"
-                  type="password"
-                  className="w-full rounded  bg-gray-800 px-3 py-2 text-white outline-none ring-indigo-300 transition duration-100 focus:ring"
-                  placeholder="Confirm password"
-                />
-              </div>
+
               <button
                 type="submit"
                 className="block rounded-lg bg-blue-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none  transition duration-100 hover:bg-blue-700 focus-visible:ring active:bg-blue-600 md:text-base"
@@ -132,12 +98,12 @@ const Register = () => {
             </div>
             <div className="flex items-center justify-center  p-4">
               <p className="text-center text-sm text-gray-500">
-                Already have an account?
+                Do&apos;n have an account?
                 <a
-                  href="/api/auth/signin"
+                  href="/register"
                   className="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700"
                 >
-                  login
+                  Register
                 </a>
               </p>
             </div>
@@ -148,4 +114,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

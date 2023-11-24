@@ -17,7 +17,7 @@ export const options: any = {
         MongoDbConection();
         const { email, password }: any = credentials;
         console.log(credentials);
-        
+
         const user = await UserModel.findOne({ email });
 
         if (user) {
@@ -29,17 +29,20 @@ export const options: any = {
       },
     }),
     FacebookProvider({
-      clientId: process.env.FACEBOOK_CLIENT_ID||"",
-      clientSecret: process.env.FACEBOOK_CLIENT_SECRET||"",
+      clientId: process.env.FACEBOOK_CLIENT_ID || "",
+      clientSecret: process.env.FACEBOOK_CLIENT_SECRET || "",
     }),
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID||"",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET||"",
+      clientId: process.env.GOOGLE_CLIENT_ID || "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
   session: {
     strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60,
+  },
+  pages: {
+    signIn: "/signin",
   },
 };
