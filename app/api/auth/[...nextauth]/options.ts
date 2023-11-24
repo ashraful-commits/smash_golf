@@ -1,6 +1,7 @@
 import FacebookProvider from "next-auth/providers/facebook";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
+
 import UserModel from "@/model/User";
 import { MongoDbConection } from "@/config/MongodbConection";
 import Toastify from "@/Utility/Toastify";
@@ -16,6 +17,7 @@ export const options: any = {
         MongoDbConection();
         const { email, password } = credentials;
         console.log(credentials);
+        let UserModel:any
         const user = await UserModel.findOne({ email });
 
         if (user) {
