@@ -15,9 +15,9 @@ export const options: any = {
       },
       async authorize(credentials, req) {
         MongoDbConection();
-        const { email, password } = credentials;
+        const { email, password }:any = credentials;
         console.log(credentials);
-        let UserModel:any
+        let UserModel: any;
         const user = await UserModel.findOne({ email });
 
         if (user) {
