@@ -42,10 +42,10 @@ const Login = (props: any) => {
         password: "",
       });
 
-      Toastify("Registration successful!", "success");
+      Toastify("Login successful!", "success");
     } catch (error) {
-      Toastify("Registration failed. Please try again.", "error");
-      console.error("Registration failed:", error);
+      Toastify("Login failed. Please try again.", "error");
+      console.error("Login failed:", error);
     }
   };
   return (
