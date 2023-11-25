@@ -19,12 +19,12 @@ const Login = (props: any) => {
     }));
   };
   //===========================
-  const handleGoogleLogin = () => {
-    signIn("google");
+  const handleGoogleLogin = async () => {
+    await signIn("google");
     Toastify("Login  successful!", "success");
   };
-  const handleFacebookLogin = () => {
-    signIn("facebook");
+  const handleFacebookLogin = async () => {
+    await signIn("facebook");
     Toastify("Login successful!", "success");
   };
   const handleForm = async (e: any) => {
