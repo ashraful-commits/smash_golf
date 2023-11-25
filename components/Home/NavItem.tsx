@@ -3,6 +3,7 @@ import { NavItemProps } from "@/Types";
 import React, { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
+import Toastify from "@/Utility/Toastify";
 
 
 const NavItem = ({ NavItems }: NavItemProps) => {
@@ -13,6 +14,7 @@ const handleLogout=async(e:any)=>{
   e.preventDefault()
  await signOut()
  router.push("/signin")
+ Toastify("Logout successful!", "success");
 }
   return (
     <ul className="flex gap-x-[26px]">
