@@ -20,10 +20,10 @@ const Login = (props: any) => {
   };
   //===========================
   const handleGoogleLogin = () => {
-    signIn("google", { callbackUrl: "/" });
+    signIn("google", { callbackUrl: "https://smash-golf.vercel.app/" });
   };
   const handleFacebookLogin = () => {
-    signIn("facebook", { callbackUrl: "/" });
+    signIn("facebook", { callbackUrl:"https://smash-golf.vercel.app/" });
   };
   const handleForm = async (e: any) => {
     e.preventDefault();
