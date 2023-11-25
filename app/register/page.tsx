@@ -40,7 +40,7 @@ const Register = () => {
       Toastify("Registration successful!", "success");
 
       // Use router.push for navigation
-      router.push("/login");
+      router.push("/signin");
     } catch (error) {
       // Handle registration failure, show an error toast, etc.
       Toastify("Registration failed. Please try again.", "error");
