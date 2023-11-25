@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 import avatar from "@/public/avatar.png";
-import logo from "@/public/logo.png";
+import logo from "@/public/Logo.png";
 
 import { Button } from "../ui/button";
 import MaxWidthContainer from "../user/MaxWidthContainer";

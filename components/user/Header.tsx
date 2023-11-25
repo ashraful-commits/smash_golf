@@ -2,7 +2,7 @@ import Image from "next/image";
 import MaxWidthContainer from "./MaxWidthContainer";
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 import avatar from "@/public/avatar.png";
-import logo from "@/public/logo.png";
+import logo from "@/public/Logo.png";
 import Link from "next/link";
 import { Button } from "../ui/button";
 const Header = () => {
