@@ -1,6 +1,7 @@
 "use client";
 import { register } from "@/Utility/Register";
 import Toastify from "@/Utility/Toastify";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import React, { useState } from "react";
@@ -133,12 +134,12 @@ const Register = () => {
             <div className="flex items-center justify-center  p-4">
               <p className="text-center text-sm text-gray-500">
                 Already have an account?
-                <a
-                  href="/api/auth/signin"
+                <Link
+                  href="/signin"
                   className="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700"
                 >
                   login
-                </a>
+                </Link>
               </p>
             </div>
           </form>
