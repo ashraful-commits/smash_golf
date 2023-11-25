@@ -24,6 +24,7 @@ const Login = (props: any) => {
     try {
       await signIn("google");
       Toastify("Login successful!", "success");
+      router.push("/");
     } catch (error) {
       Toastify("Login failed. Please try again.", "error");
     }
@@ -34,6 +35,7 @@ const Login = (props: any) => {
     try {
       await signIn("facebook");
       Toastify("Login successful!", "success");
+      router.push("/");
     } catch (error) {
       Toastify("Login failed. Please try again.", "error");
     }
