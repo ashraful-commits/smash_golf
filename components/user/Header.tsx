@@ -10,7 +10,10 @@ const Header = () => {
     <MaxWidthContainer className="w-full h-[70px] bg-[#1C1C24] px-[14px] flex items-center sticky z-[99999] top-0">
       <header className=" w-full flex h-full items-center justify-between">
         <div className="w-full mx-auto h-full flex justify-between items-center">
-          <Link href="/" className="flex title-font font-medium items-center mb-4 md:mb-0">
+          <Link
+            href="/"
+            className="flex title-font font-medium items-center mb-4 md:mb-0"
+          >
             <Image
               className="w-[47px] h-[44px] shrink-0"
               src={logo}

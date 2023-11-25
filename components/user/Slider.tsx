@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import { SliderType } from "@/Type";
+import { SliderType } from "@/Types";
 import bigLeagueoverlay from "@/public/bigleaqueoverlay.png";
 const Slider = ({ bigLeague }: SliderType) => {
   return (

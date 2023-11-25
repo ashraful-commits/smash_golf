@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { leaderType } from "@/Type";
+import { leaderType } from "@/Types";
 
 const LeaderBoardMember = ({
   leaderAvatar,

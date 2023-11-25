@@ -1,4 +1,4 @@
-import { AchievementType } from "@/Type";
+import { AchievementType } from "@/Types";
 import Image from "next/image";
 import React from "react";
 import { Progress } from "../ui/progress";

@@ -1,4 +1,4 @@
-import { UpcomingType } from "@/Type";
+import { UpcomingType } from "@/Types";
 import Image from "next/image";
 import React from "react";
 

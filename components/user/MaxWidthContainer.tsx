@@ -1,4 +1,4 @@
-import { maxWidthType } from "@/Type";
+import { maxWidthType } from "@/Types";
 import { cn } from "@/lib/utils";
 import React from "react";
 

@@ -5,7 +5,7 @@ import avatar from "@/public/avatar.png";
 import Achievements from "./Achievements";
 import InviteFriend from "./InviteFriend";
 import TableComponent from "./TableComponent";
-import { InvoiceType, singleInvoice } from "@/Type";
+import { InvoiceType, singleInvoice } from "@/Types";
 
 const MainContent = () => {
   const invoices = [

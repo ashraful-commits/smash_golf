@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/table";
 import Image from "next/image";
 import { ScrollArea } from "../ui/scroll-area";
-import { InvoiceType, singleInvoice } from "@/Type";
+import { InvoiceType, singleInvoice } from "@/Types";
 
 const TableComponent = ({ data }: any) => {
   return (

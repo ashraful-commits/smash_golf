@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import participent from "@/public/participentSvg.png";
 import eventOverlay from "@/public/eventOverlay.png";
-import { eventType } from "@/Type";
+import { eventType } from "@/Types";
 const UpComingEvent = ({ tourImg, date, time, title, Participant }:eventType) => {
   return (
     <div className="w-[304px] relative z-0 h-[325px] rounded-tr-[20px] rounded-tl-[20px] overflow-hidden shrink-0 bg-[#1c1c24]">
