@@ -6,13 +6,9 @@ import Image from "next/image";
 
 import NavItem from "./NavItem";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
-const Navbar = ({ session }:any) => {
-  const router = useRouter();
-  if (!session) {
-    router.push("/api/auth/signin");
-  }
+const Navbar = ({ session }: any) => {
+  console.log(session);
   const NavItems = [
     {
       path: "/",

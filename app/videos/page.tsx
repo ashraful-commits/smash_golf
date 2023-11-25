@@ -5,11 +5,12 @@ import React from "react";
 import { options } from "../api/auth/[...nextauth]/options";
 import MaxWidthContainer from "@/components/Home/MaxWidthContainer";
 
-const page = async() => {
+const page = async () => {
   const session = await getServerSession(options);
+  console.log(session);
   return (
     <MaxWidthContainer>
-      <Navbar session={session}/>
+      <Navbar session={session} />
       <Footer />
     </MaxWidthContainer>
   );
