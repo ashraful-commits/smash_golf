@@ -18,36 +18,48 @@ const Login = (props: any) => {
       [e.target.name]: e.target.value,
     }));
   };
-  //===========================
   const handleGoogleLogin = async () => {
-    await signIn("google");
-    Toastify("Login  successful!", "success");
-  };
-  const handleFacebookLogin = async () => {
-    await signIn("facebook");
-    Toastify("Login successful!", "success");
-  };
-  const handleForm = async (e: any) => {
-    e.preventDefault();
-
     try {
-      await signIn("credentials", {
-        email: input.email,
-        password: input.password,
-        redirect: true,
-        callbackUrl: props.callbackUrl ?? "https://smash-golf.vercel.app/",
-      });
-      setInput({
-        email: "",
-        password: "",
-      });
-
+      await signIn("google");
       Toastify("Login successful!", "success");
     } catch (error) {
       Toastify("Login failed. Please try again.", "error");
       console.error("Login failed:", error);
     }
   };
+
+  const handleFacebookLogin = async () => {
+    try {
+      await signIn("facebook");
+      Toastify("Login successful!", "success");
+    } catch (error) {
+      Toastify("Login failed. Please try again.", "error");
+      console.error("Login failed:", error);
+    }
+  };
+
+  const handleForm = (e: any) => {
+    e.preventDefault();
+
+    signIn("credentials", {
+      email: input.email,
+      password: input.password,
+      redirect: true,
+      callbackUrl: props.callbackUrl ?? "https://smash-golf.vercel.app/",
+    })
+      .then(() => {
+        setInput({
+          email: "",
+          password: "",
+        });
+        Toastify("Login successful!", "success");
+      })
+      .catch((error) => {
+        Toastify("Login failed. Please try again.", "error");
+        console.error("Login failed:", error);
+      });
+  };
+
   return (
     <div className="w-screen h-screen bg-black flex justify-center items-center">
       <div className="bg-black py-6 sm:py-8 lg:py-12">
