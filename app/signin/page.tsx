@@ -19,12 +19,12 @@ const Login = (props: any) => {
     }));
   };
   //===========================
-  const handleGoogleLogin =()=>{
-     signIn("google",{callbackUrl:"/"})
-  }
-  const handleFacebookLogin =()=>{
-   signIn("facebook",{callbackUrl:"/"})
-  }
+  const handleGoogleLogin = () => {
+    signIn("google", { callbackUrl: "/" });
+  };
+  const handleFacebookLogin = () => {
+    signIn("facebook", { callbackUrl: "/" });
+  };
   const handleForm = async (e: any) => {
     e.preventDefault();
 
@@ -51,7 +51,7 @@ const Login = (props: any) => {
       <div className="bg-black py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <h2 className="mb-4 text-center text-2xl font-bold text-white md:mb-8 lg:text-3xl">
-           Login
+            Login
           </h2>
           <form
             onSubmit={handleForm}
