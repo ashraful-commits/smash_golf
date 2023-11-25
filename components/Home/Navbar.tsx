@@ -24,18 +24,18 @@ const Navbar = ({ session }:any) => {
     },
     {
       path: "/videos",
-      name: "videos",
+      name: "Videos",
     },
     {
       path: "/leaderboards",
-      name: "leaderboards",
+      name: "Leaderboards",
     },
     {
       path: "/contact",
-      name: "contact",
+      name: "Contact",
     },
     {
-      path: `/${session ? "api/auth/signout" : "register"}`,
+      path: `${session ? "/api/auth/signout" : "/register"}`,
       name: `${session ? "Logout" : "Register"}`,
     },
   ];

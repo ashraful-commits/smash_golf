@@ -13,7 +13,7 @@ const NavItem = ({ NavItems }: NavItemProps) => {
           <li
             key={i}
             className={` hover:scale-110 transition-all duration-500 ease-in-out ${
-              item.name === "register"
+              item.name === "Register"||item.name === "Logout"
                 ? "w-[141px] h-[42px] ml-[18px]  bg-blue-500 hover:bg-blue-600 transition-all duration-500 ease-in-out -skew-x-[25deg] rounded-md"
                 : " flex justify-center items-center"
             }`}
@@ -22,7 +22,7 @@ const NavItem = ({ NavItems }: NavItemProps) => {
               href={item.path}
               onClick={() => setActive(item.path)}
               className={`flex w-full ${
-                item.name === "register" ? "skew-x-[25deg]" : ""
+                item.name === "Register"||item.name === "Logout" ? "skew-x-[25deg]" : ""
               } h-full justify-center items-center `}
             >
               <span
@@ -31,7 +31,7 @@ const NavItem = ({ NavItems }: NavItemProps) => {
                     ? "text-[15.79px] font-[700] capitalize"
                     : "text-[18.424px]  inline-block capitalize  font-[400] font-['Russo_one']"
                 } ${item.path === pathName ? "text-blue-500" : "text-white"} ${
-                  item.name === "register" ? "text-white " : ""
+                  item.name === "Register"||item.name === "Logout" ? "text-white " : ""
                 }`}
               >
                 {item.name}
