@@ -18,7 +18,8 @@ const Login = (props: any) => {
       [e.target.name]: e.target.value,
     }));
   };
-  const handleGoogleLogin = async () => {
+  const handleGoogleLogin = async (e: any) => {
+    e.preventDefault();
     try {
       await signIn("google");
       Toastify("Login successful!", "success");
@@ -28,7 +29,8 @@ const Login = (props: any) => {
     }
   };
 
-  const handleFacebookLogin = async () => {
+  const handleFacebookLogin = async (e: any) => {
+    e.preventDefault();
     try {
       await signIn("facebook");
       Toastify("Login successful!", "success");
@@ -116,7 +118,7 @@ const Login = (props: any) => {
                   _______________ or sign in _______________
                 </p>
                 <button
-                  onClick={handleGoogleLogin}
+                  onClick={(e) => handleGoogleLogin(e)}
                   className="flex flex-wrap justify-center w-full items-center gap-3  text-white bg-gray-900 hover:border-gray-500 px-2 py-1.5 rounded-md"
                 >
                   <svg
@@ -167,7 +169,7 @@ const Login = (props: any) => {
                 </button>
 
                 <button
-                  onClick={handleFacebookLogin}
+                  onClick={(e) => handleFacebookLogin(e)}
                   className="flex mt-2 flex-wrap justify-center w-full text-blue-500 bg-gray-900 items-center gap-3 hover:border-gray-500 px-2 py-1.5 rounded-md"
                 >
                   <svg
