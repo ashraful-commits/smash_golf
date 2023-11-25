@@ -23,10 +23,10 @@ const Navbar = ({ session }: any) => {
       name: "Videos",
     },
     {
-      path: "/leaderboards",
-      name: `${
+      path: `${
         session ? "https://smash-user-dashboard.vercel.app/leader" : "/signin"
       }`,
+      name: "Leaderboard",
     },
     {
       path: "/contact",
