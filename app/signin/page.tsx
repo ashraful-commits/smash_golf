@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import React, { useState } from "react";
+import { render } from "react-dom";
 const Login = (props: any) => {
   const router = useRouter();
   const [input, setInput] = useState({
@@ -23,6 +24,7 @@ const Login = (props: any) => {
     try {
       await signIn("google");
       Toastify("Login successful!", "success");
+      router.push("/");
     } catch (error) {
       Toastify("Login failed. Please try again.", "error");
       console.error("Login failed:", error);
@@ -34,6 +36,7 @@ const Login = (props: any) => {
     try {
       await signIn("facebook");
       Toastify("Login successful!", "success");
+      router.push("/");
     } catch (error) {
       Toastify("Login failed. Please try again.", "error");
       console.error("Login failed:", error);
