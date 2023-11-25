@@ -22,7 +22,7 @@ const Login = (props: any) => {
   const handleGoogleLogin = async (e: any) => {
     e.preventDefault();
     try {
-      await signIn("google");
+      await signIn("google",{callbackUrl:"https://smash-golf.vercel.app/"});
       Toastify("Login successful!", "success");
     } catch (error) {
       Toastify("Login failed. Please try again.", "error");
@@ -32,7 +32,7 @@ const Login = (props: any) => {
   const handleFacebookLogin = async (e: any) => {
     e.preventDefault();
     try {
-      await signIn("facebook");
+      await signIn("facebook",{callbackUrl:"https://smash-golf.vercel.app/"});
       Toastify("Login successful!", "success");
     } catch (error) {
       Toastify("Login failed. Please try again.", "error");
