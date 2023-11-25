@@ -8,7 +8,7 @@ import NavItem from "./NavItem";
 import Link from "next/link";
 
 const Navbar = ({ session }: any) => {
-  console.log(session);
+
   const NavItems = [
     {
       path: "/",
@@ -57,11 +57,11 @@ const Navbar = ({ session }: any) => {
   useEffect(() => {
     if (scrollY > 0) {
       setStickyHeader(0);
-    } else {
-      setStickyHeader(35);
+    }else{
+      setStickyHeader(35)
     }
   }, [scrollY]);
-
+console.log(stickyHeader)
   return (
     <MaxWidthContainer
       className={`w-[1440px] transition-all sticky duration-500 ease-in-out  z-[9999999] px-[100px] m-auto top-[${stickyHeader}px] left-0  h-[98px] min-w-[1440px] ${
