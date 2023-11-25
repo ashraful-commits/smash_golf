@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import React, { useState } from "react";
-import { render } from "react-dom";
+
 const Login = (props: any) => {
   const router = useRouter();
   const [input, setInput] = useState({
