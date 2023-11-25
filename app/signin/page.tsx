@@ -21,9 +21,11 @@ const Login = (props: any) => {
   //===========================
   const handleGoogleLogin = () => {
     signIn("google", { callbackUrl: "https://smash-golf.vercel.app/" });
+    Toastify("Login  successful!", "success");
   };
   const handleFacebookLogin = () => {
     signIn("facebook", { callbackUrl:"https://smash-golf.vercel.app/" });
+    Toastify("Login successful!", "success");
   };
   const handleForm = async (e: any) => {
     e.preventDefault();
