@@ -24,10 +24,8 @@ const Login = (props: any) => {
     try {
       await signIn("google");
       Toastify("Login successful!", "success");
-      router.push("https://smash-golf.vercel.app/");
     } catch (error) {
       Toastify("Login failed. Please try again.", "error");
-      console.error("Login failed:", error);
     }
   };
 
@@ -36,10 +34,8 @@ const Login = (props: any) => {
     try {
       await signIn("facebook");
       Toastify("Login successful!", "success");
-      router.push("https://smash-golf.vercel.app/");
     } catch (error) {
       Toastify("Login failed. Please try again.", "error");
-      console.error("Login failed:", error);
     }
   };
 
