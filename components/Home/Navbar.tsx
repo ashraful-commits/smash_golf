@@ -7,8 +7,7 @@ import Image from "next/image";
 import NavItem from "./NavItem";
 import Link from "next/link";
 
-const Navbar = ({ session ,userData}:any) => {
-  
+const Navbar = ({ session, userData }: any) => {
   const NavItems = [
     {
       path: "/",

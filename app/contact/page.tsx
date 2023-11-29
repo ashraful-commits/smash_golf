@@ -6,10 +6,16 @@ import Footer from "@/components/Home/Footer";
 import MaxWidthContainer from "@/components/Home/MaxWidthContainer";
 import { getSingleUser } from "@/Utility/GetSingleUser";
 
-const Contact = async() => {
+const Contact = async () => {
   const session = await getServerSession(options);
-  const userData = await getSingleUser({email:session?.user?.email})
-  return <MaxWidthContainer><Navbar session={session} userData={userData?.data?.user} /><Footer/></MaxWidthContainer>;
+
+  // const userData = await getSingleUser({ email: session?.user?.email });
+  return (
+    <MaxWidthContainer>
+      <Navbar session={session} />
+      <Footer />
+    </MaxWidthContainer>
+  );
 };
 
 export default Contact;
