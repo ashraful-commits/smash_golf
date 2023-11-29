@@ -2,7 +2,10 @@ import { MongoDbConection } from "@/config/MongodbConection";
 import UserModel from "@/model/User";
 import { NextResponse } from "next/server";
 
-export async function GET(req: Request, { params }: any) {
+export async function GET(
+  req: Request,
+  { params }: { params: { email: string } }
+) {
   const email = params.email;
   MongoDbConection();
   const singleData = await UserModel.findOne({ email });
