@@ -4,8 +4,6 @@ import Header from "@/components/user/Header";
 import MainContainer from "@/components/user/MainContainer";
 
 const User = async () => {
-
-
   return (
     <MaxWidthContainer>
       <Header />
