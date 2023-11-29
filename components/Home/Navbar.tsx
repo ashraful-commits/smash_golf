@@ -7,7 +7,8 @@ import Image from "next/image";
 import NavItem from "./NavItem";
 import Link from "next/link";
 
-const Navbar = ({ session }: any) => {
+const Navbar = ({ session ,userData}:any) => {
+  
   const NavItems = [
     {
       path: "/",
@@ -22,11 +23,11 @@ const Navbar = ({ session }: any) => {
       name: "Videos",
     },
     {
-      path: `${session ? "/user" : "/signin"}`,
+      path: `${session ? `/user/${session?.user?.email}` : "/signin"}`,
       name: "Userboard",
     },
     {
-      path: `${session ? "/leader" : "/signin"}`,
+      path: `${session ? `/leader/${session?.user?.email}` : "/signin"}`,
       name: "Leaderboard",
     },
     {
@@ -74,7 +75,7 @@ const Navbar = ({ session }: any) => {
           <Image className="w-full h-full object-cover" src={logo} alt="logo" />
         </Link>
         <div className="menu flex h-full items-end">
-          <NavItem NavItems={NavItems} />
+          <NavItem NavItems={NavItems} role={userData?.role} />
         </div>
       </MaxWidthContainer>
     </MaxWidthContainer>

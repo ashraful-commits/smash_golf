@@ -13,12 +13,12 @@ import leaderAvatar4 from "@/public/leaderAvatar4.png";
 import { UpcomingTournament } from "./UpcomingTournament";
 import tourImg1 from "@/public/tournamentImg1.png";
 import tourImg2 from "@/public/tournamentImg2.png";
-import tourImg3 from "@/public/tournamentImg3.png";
-import tourImg4 from "@/public/tournamentImg4.png";
+
 import UpComingEvent from "./UpComingEvent";
 import MostPopularGam from "./MostPopularGam";
 import Slider from "./Slider";
-const MainContent = () => {
+
+const MainContent = ({ userData }: any) => {
   const [slider, setSlider] = useState(0);
   const sliderList = [
     {
@@ -28,11 +28,11 @@ const MainContent = () => {
       bigLeague: tourImg2,
     },
   ];
-  console.log(slider);
+
   return (
     <MaxWidthContainer className="w-[1350px] max-h-full bg-[#13131A] px-[40px] pt-[49px]">
       <h6 className="text-[24px] flex items-center gap-[3px] font-['Poppins'] font-[600] leading-[36px] tracking-[.1px] text-[#fafafb] ">
-        Hi James,{" "}
+        Hi {userData?.name},
         <span
           className="text-[18px] block text-[#929290] font-['Roboto'] 
         "
@@ -46,11 +46,7 @@ const MainContent = () => {
             return (
               <div
                 key={i}
-                className={` ${
-                  slider === i
-                    ? "absolute  top-0 left-0  "
-                    : ""
-                }`}
+                className={` ${slider === i ? "absolute  top-0 left-0  " : ""}`}
               >
                 <Slider bigLeague={item.bigLeague} />
               </div>

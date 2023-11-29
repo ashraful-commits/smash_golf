@@ -16,12 +16,10 @@ export const options: any = {
       async authorize(credentials, req) {
         MongoDbConection();
         const { email, password }: any = credentials;
-        console.log(credentials);
 
         const user = await UserModel.findOne({ email });
 
         if (user) {
-          //   Toastify("Login successful!", "success");
           return user;
         } else {
           return null;

@@ -5,7 +5,8 @@ export type NavItemProps = {
   NavItems: {
     path: string;
     name: string;
-  }[];
+  }[],
+  role:string
 };
 
 export type UpcomingGameProps = {

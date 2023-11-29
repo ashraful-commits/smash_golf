@@ -5,20 +5,24 @@ import { usePathname, useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
 import Toastify from "@/Utility/Toastify";
 
-
-const NavItem = ({ NavItems }: NavItemProps) => {
+const NavItem = ({ NavItems, role }: NavItemProps) => {
   const [active, setActive] = useState<null | string>("/");
-  const router = useRouter()
+  const router = useRouter();
   const pathName = usePathname();
-const handleLogout=async(e:any)=>{
-  e.preventDefault()
- await signOut()
- router.push("/signin")
- Toastify("Logout successful!", "success");
-}
+  const handleLogout = async (e: any) => {
+    e.preventDefault();
+    await signOut();
+    router.push("/signin");
+    Toastify("Logout successful!", "success");
+  };
   return (
     <ul className="flex gap-x-[26px]">
-      {NavItems.map((item, i) => {
+      {NavItems.filter(
+        (item) =>
+          (item.name !== "Leaderboard" && role === "user") ||
+          (item.name !== "Userboard" && role === "admin") ||
+          item.name
+      ).map((item, i) => {
         return (
           <li
             key={i}
@@ -31,7 +35,7 @@ const handleLogout=async(e:any)=>{
             <a
               href={item.path}
               onClick={(e) =>
-                item.name === "Logout" ? handleLogout(e): setActive(item.path)
+                item.name === "Logout" ? handleLogout(e) : setActive(item.path)
               }
               className={`flex w-full ${
                 item.name === "Register" || item.name === "Logout"

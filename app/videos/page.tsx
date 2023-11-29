@@ -4,13 +4,14 @@ import { getServerSession } from "next-auth";
 import React from "react";
 import { options } from "../api/auth/[...nextauth]/options";
 import MaxWidthContainer from "@/components/Home/MaxWidthContainer";
+import { getSingleUser } from "@/Utility/GetSingleUser";
 
 const page = async () => {
   const session = await getServerSession(options);
-  console.log(session);
+ const userData = await getSingleUser({email:session?.user?.email})
   return (
     <MaxWidthContainer>
-      <Navbar session={session} />
+      <Navbar session={session} userData={userData?.data?.user} />
       <Footer />
     </MaxWidthContainer>
   );
