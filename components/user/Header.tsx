@@ -4,7 +4,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 import avatar from "@/public/avatar.png";
 import logo from "@/public/Logo.png";
 import Link from "next/link";
-import { Button } from "../ui/button";
+
 const Header = () => {
   return (
     <MaxWidthContainer className="w-full h-[70px] bg-[#1C1C24] px-[14px] flex items-center sticky z-[99999] top-0">

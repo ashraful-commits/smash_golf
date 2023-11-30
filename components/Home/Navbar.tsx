@@ -6,8 +6,9 @@ import Image from "next/image";
 
 import NavItem from "./NavItem";
 import Link from "next/link";
+import { getSingleUser } from "@/Utility/GetSingleUser";
 
-const Navbar = ({ session, userData }: any) => {
+const Navbar = ({ session }: any) => {
   const NavItems = [
     {
       path: "/",
@@ -41,7 +42,8 @@ const Navbar = ({ session, userData }: any) => {
   //==============================
   const [scrollY, setScrollY] = useState(0);
   const [stickyHeader, setStickyHeader] = useState(35);
-
+  const [userData, setUserData] = useState({});
+  console.log(session);
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -60,6 +62,13 @@ const Navbar = ({ session, userData }: any) => {
       setStickyHeader(35);
     }
   }, [scrollY]);
+  useEffect(() => {
+    const singleDataFunc = async () => {
+      const userData = await getSingleUser({ email: session?.user?.email });
+      setUserData(userData?.data?.user);
+    };
+    singleDataFunc();
+  }, [session]);
 
   return (
     <MaxWidthContainer

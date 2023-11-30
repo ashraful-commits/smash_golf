@@ -4,7 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
 import UserModel from "@/model/User";
 import { MongoDbConection } from "@/config/MongodbConection";
-import Toastify from "@/Utility/Toastify";
+
 export const options: any = {
   providers: [
     CredentialsProvider({

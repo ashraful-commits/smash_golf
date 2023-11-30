@@ -18,7 +18,7 @@ const LeaderBoardMember = ({
           src={leaderAvatar ? leaderAvatar : ""}
         />
         <div className="flex-grow">
-          <h2 className="text-white font-['Poppins'] font-[400] tracking-[.1px] title-font font-medium">
+          <h2 className="text-white font-['Poppins'] font-[400] tracking-[.1px] title-font ">
             {name}
           </h2>
           <p className="text-[#92929d] font-['Poppins'] text-[12px] ">

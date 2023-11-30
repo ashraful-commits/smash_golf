@@ -17,12 +17,10 @@ import { getSingleUser } from "@/Utility/GetSingleUser";
 export default async function Home() {
   const session = await getServerSession(options);
 
-  const userData = await getSingleUser({ email: session?.user?.email });
-
   return (
     <MaxWidthContainer className="max-w-[1440px] relative">
       <div className="mx-auto relative  text-center flex flex-col z-0 items-center max-w-[1440px] min-h-screen">
-        <Navbar userData={userData?.data?.user} session={session} />
+        <Navbar session={session} />
         <Hero />
         <UpcomingTournaments />
         <HowItWork />

@@ -8,7 +8,7 @@ import { getSingleUser } from "@/Utility/GetSingleUser";
 
 const About = async () => {
   const session = await getServerSession(options);
-  // const userData = await getSingleUser({ email: session?.user?.email });
+
   return (
     <MaxWidthContainer>
       <Navbar session={session} />
