@@ -42,7 +42,7 @@ const Navbar = ({ session }: any) => {
   //==============================
   const [scrollY, setScrollY] = useState(0);
   const [stickyHeader, setStickyHeader] = useState(35);
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState<any>({});
   console.log(session);
   useEffect(() => {
     const handleScroll = () => {
