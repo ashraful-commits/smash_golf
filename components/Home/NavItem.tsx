@@ -21,7 +21,7 @@ const NavItem = ({ NavItems, role }: NavItemProps) => {
         (item) =>
           (item.name !== "Leaderboard" && role === "user") ||
           (item.name !== "Userboard" && role === "admin") ||
-          item.name
+          (!role && item.name !== "Leaderboard" && item.name !== "Userboard")
       ).map((item, i) => {
         return (
           <li

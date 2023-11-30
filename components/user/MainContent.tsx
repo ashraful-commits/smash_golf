@@ -19,6 +19,7 @@ import MostPopularGam from "./MostPopularGam";
 import Slider from "./Slider";
 
 const MainContent = ({ userData }: any) => {
+  console.log(userData)
   const [slider, setSlider] = useState(0);
   const sliderList = [
     {

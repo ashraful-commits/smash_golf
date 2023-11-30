@@ -9,6 +9,7 @@ import Link from "next/link";
 import { getSingleUser } from "@/Utility/GetSingleUser";
 
 const Navbar = ({ session }: any) => {
+  console.log(session);
   const NavItems = [
     {
       path: "/",
@@ -43,7 +44,7 @@ const Navbar = ({ session }: any) => {
   const [scrollY, setScrollY] = useState(0);
   const [stickyHeader, setStickyHeader] = useState(35);
   const [userData, setUserData] = useState<any>({});
-  console.log(session);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -64,8 +65,13 @@ const Navbar = ({ session }: any) => {
   }, [scrollY]);
   useEffect(() => {
     const singleDataFunc = async () => {
-      const userData = await getSingleUser({ email: session?.user?.email });
-      setUserData(userData?.data?.user);
+      try {
+        const userData = await getSingleUser({ email: session?.user?.email });
+        console.log(userData);
+        setUserData(userData?.data?.user);
+      } catch (error) {
+        console.log(error);
+      }
     };
     singleDataFunc();
   }, [session]);
