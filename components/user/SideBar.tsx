@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import MaxWidthContainer from "./MaxWidthContainer";
 import Image from "next/image";
 import avatar from "@/public/avatar.png";
-import board from "@/public/board.svg";
+
 import Link from "next/link";
 const SideBar = () => {
   const LiList = [
@@ -16,7 +16,7 @@ const SideBar = () => {
         </>
       ),
       name: "News Feed",
-      path: "/newsfeed",
+      path: "/user/newsfeed",
     },
     {
       svg: (
@@ -29,7 +29,7 @@ const SideBar = () => {
         </>
       ),
       name: "Leagues",
-      path: "/leagues",
+      path: "/user/leagues",
     },
     {
       svg: (
@@ -44,7 +44,7 @@ const SideBar = () => {
         </>
       ),
       name: "Tournaments",
-      path: "/tournaments",
+      path: "/user/tournaments",
     },
 
     {
@@ -61,7 +61,7 @@ const SideBar = () => {
         </>
       ),
       name: "Redeem",
-      path: "/redeem",
+      path: "/user/redeem",
     },
     {
       svg: (
@@ -72,7 +72,7 @@ const SideBar = () => {
         </>
       ),
       name: "Leaderboards",
-      path: "/leaderboards",
+      path: "/user/leaderboards",
     },
     {
       svg: (
@@ -81,7 +81,7 @@ const SideBar = () => {
         </>
       ),
       name: "Setting",
-      path: "/setting",
+      path: "/user/setting",
     },
   ];
   //=======================================
