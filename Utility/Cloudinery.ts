@@ -25,19 +25,3 @@ export const cloudDelete = async (publicId: any) => {
   return data;
 };
 //=========================================== download from cloud
-export const cloudDownload = (publicId: any, fileFormat: any) => {
-  try {
-    const signedUrl = cloudinary.utils.private_download_url(
-      publicId,
-      fileFormat,
-      {
-        type: "authenticated",
-        secure: true,
-      }
-    );
-    return signedUrl;
-  } catch (error: any) {
-    console.error("Error generating signed download URL:", error.message);
-    throw error;
-  }
-};
