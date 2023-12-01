@@ -2,7 +2,10 @@ import { MongoDbConection } from "@/config/MongodbConection";
 import NewsFeedModel from "@/model/Newsfeed";
 import { NextResponse } from "next/server";
 
-export async function PUT(req: Request, { params }: { params: string }) {
+export async function PUT(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
   MongoDbConection();
   const id = params.id;
   const data = await req.json();
@@ -14,7 +17,10 @@ export async function PUT(req: Request, { params }: { params: string }) {
   );
   return NextResponse.json({ newsfeed: newsFeed });
 }
-export async function DELETE(req: Request, { params }: { params: string }) {
+export async function DELETE(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
   MongoDbConection();
   const id = params.id;
   const newsFeed = await NewsFeedModel.findByIdAndDelete(id);
