@@ -16,7 +16,7 @@ const SideBar = () => {
         </>
       ),
       name: "News Feed",
-      path: "/newfeed",
+      path: "/newsfeed",
     },
     {
       svg: (

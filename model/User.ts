@@ -22,11 +22,15 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "user",
     },
+    photo: {
+      type: String,
+      default: null,
+    },
   },
   { timestamps: true }
 );
 
-let UserModel:any;
+let UserModel: any;
 
 try {
   UserModel = mongoose.model("Smash");

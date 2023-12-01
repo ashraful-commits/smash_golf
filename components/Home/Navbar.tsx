@@ -9,7 +9,6 @@ import Link from "next/link";
 import { getSingleUser } from "@/Utility/GetSingleUser";
 
 const Navbar = ({ session }: any) => {
-  console.log(session);
   const NavItems = [
     {
       path: "/",
