@@ -2,7 +2,11 @@ import { MongoDbConection } from "@/config/MongodbConection";
 import NewsFeedModel from "@/model/Newsfeed";
 import { NextResponse } from "next/server";
 
-export async function GET(req: Request) {}
+export async function GET(req: Request) {
+  MongoDbConection();
+  const newsFeed = await NewsFeedModel.find();
+  return NextResponse.json({ newsfeed: newsFeed });
+}
 export async function HEAD(req: Request) {}
 
 export async function POST(req: Request) {
