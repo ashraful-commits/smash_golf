@@ -3,7 +3,7 @@ import React from "react";
 
 const NewsFeed =async () => {
  const allNewsFeed= await getAllNewsFeed();
- console.log(allNewsFeed)
+console.log(allNewsFeed)
   return <div>NewsFeed</div>;
 };
 
