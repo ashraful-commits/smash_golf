@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import NavItem from "./NavItem";
 import Link from "next/link";
-import { getSingleUser } from "@/Utility/GetSingleUser";
+import { useSingleUserQuery } from "@/lib/feature/UserSlice";
 
 const Navbar = ({ session }: any) => {
   const NavItems = [
@@ -23,11 +23,11 @@ const Navbar = ({ session }: any) => {
       name: "Videos",
     },
     {
-      path: `${session ? `/user/${session?.user?.email}` : "/signin"}`,
+      path: `${session ? `/user` : "/signin"}`,
       name: "Userboard",
     },
     {
-      path: `${session ? `/leader/${session?.user?.email}` : "/signin"}`,
+      path: `${session ? `/leader` : "/signin"}`,
       name: "Leaderboard",
     },
     {
@@ -42,7 +42,6 @@ const Navbar = ({ session }: any) => {
   //==============================
   const [scrollY, setScrollY] = useState(0);
   const [stickyHeader, setStickyHeader] = useState(35);
-  const [userData, setUserData] = useState<any>({});
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,19 +61,7 @@ const Navbar = ({ session }: any) => {
       setStickyHeader(35);
     }
   }, [scrollY]);
-  useEffect(() => {
-    const singleDataFunc = async () => {
-      try {
-        const userData = await getSingleUser({ email: session?.user?.email });
-        console.log(userData);
-        setUserData(userData?.data?.user);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    singleDataFunc();
-  }, [session]);
-
+  const { data } = useSingleUserQuery(session?.user?.email);
   return (
     <MaxWidthContainer
       className={`w-[1440px] transition-all sticky duration-500 ease-in-out  z-[9999999] px-[100px] m-auto !top-[${stickyHeader}px] left-0  h-[98px] min-w-[1440px] ${
@@ -88,7 +75,7 @@ const Navbar = ({ session }: any) => {
           <Image className="w-full h-full object-cover" src={logo} alt="logo" />
         </Link>
         <div className="menu flex h-full items-end">
-          <NavItem NavItems={NavItems} role={userData?.role} />
+          <NavItem NavItems={NavItems} role={data?.user?.role} />
         </div>
       </MaxWidthContainer>
     </MaxWidthContainer>

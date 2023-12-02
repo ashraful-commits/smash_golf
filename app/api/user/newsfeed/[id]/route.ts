@@ -2,6 +2,17 @@ import { MongoDbConection } from "@/config/MongodbConection";
 import NewsFeedModel from "@/model/Newsfeed";
 import { NextResponse } from "next/server";
 
+export async function GET(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
+  MongoDbConection();
+  const id = params.id;
+
+
+  const newsFeed = await NewsFeedModel.findById(id);
+  return NextResponse.json({ newsfeed: newsFeed });
+}
 export async function PUT(
   req: Request,
   { params }: { params: { id: string } }

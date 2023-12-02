@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import React from "react";
 import { options } from "../api/auth/[...nextauth]/options";
 import MaxWidthContainer from "@/components/Home/MaxWidthContainer";
-import { getSingleUser } from "@/Utility/GetSingleUser";
+
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Videos",

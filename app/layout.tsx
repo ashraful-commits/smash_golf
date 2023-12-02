@@ -9,7 +9,8 @@ import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 import AuthProvider from "../components/context/AuthProvider";
-
+import Providers from "@/components/Provider/Provider";
+import { Toaster } from "@/components/ui/toaster";
 export const metadata: Metadata = {
   title: "Smash golf tour",
   description: "play. compete. win",
@@ -41,8 +42,11 @@ export default function RootLayout({
             pauseOnHover
             theme="light"
           />
+          <Toaster />
           <div className="flex-grow flex-1">
-            <AuthProvider>{children}</AuthProvider>
+            <AuthProvider>
+              <Providers>{children}</Providers>
+            </AuthProvider>
           </div>
         </main>
       </body>

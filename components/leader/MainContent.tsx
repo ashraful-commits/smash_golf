@@ -6,8 +6,9 @@ import Achievements from "./Achievements";
 import InviteFriend from "./InviteFriend";
 import TableComponent from "./TableComponent";
 import { InvoiceType, singleInvoice } from "@/Types";
+import { useSingleLeaderQuery } from "@/lib/feature/LeaderSlice";
 
-const MainContent = ({ userData }: any) => {
+const MainContent = ({ session }: any) => {
   const invoices = [
     {
       name: "INV001",
@@ -70,7 +71,7 @@ const MainContent = ({ userData }: any) => {
       ],
     },
   ];
-  
+
   return (
     <MaxWidthContainer className="w-[1350px] p-[20px]">
       <h6 className="text-[24px] ml-[45px] w-[460px] flex items-center gap-[3px] font-['Poppins'] font-[600] leading-[36px] tracking-[.1px] text-[#fafafb] ">

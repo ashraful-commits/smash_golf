@@ -12,7 +12,7 @@ import UpcomingTournaments from "@/components/Home/UpcomingTournaments";
 import WhyStart from "@/components/Home/WhyStart";
 import { getServerSession } from "next-auth";
 import { options } from "./api/auth/[...nextauth]/options";
-import { getSingleUser } from "@/Utility/GetSingleUser";
+
 
 export default async function Home() {
   const session = await getServerSession(options);

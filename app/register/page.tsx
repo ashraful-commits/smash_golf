@@ -1,11 +1,15 @@
 "use client";
-import { register } from "@/Utility/Register";
+
 import Toastify from "@/Utility/Toastify";
+import { useUserRegisterMutation } from "@/lib/feature/UserSlice";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import React, { useState } from "react";
+
 const Register = () => {
+  const [userRegister] = useUserRegisterMutation();
   const router = useRouter();
   const [input, setInput] = useState({
     name: "",
@@ -31,7 +35,7 @@ const Register = () => {
           confirm_password: "",
         });
       } else {
-        await register({
+        userRegister({
           name: input.name,
           email: input.email,
           password: input.password,

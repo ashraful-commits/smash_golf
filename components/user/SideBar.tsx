@@ -1,11 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MaxWidthContainer from "./MaxWidthContainer";
 import Image from "next/image";
 import avatar from "@/public/avatar.png";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 const SideBar = () => {
+  const pathName = usePathname();
+
   const LiList = [
     {
       svg: (
@@ -86,9 +89,11 @@ const SideBar = () => {
   ];
   //=======================================
   const [activeLi, setActiveLi] = useState("");
-
+  useEffect(() => {
+    setActiveLi(pathName);
+  }, [pathName]);
   return (
-    <MaxWidthContainer className="w-[250px] text-center bg-[#1C1C24] min-h-full">
+    <MaxWidthContainer className="w-[250px] sticky top-[70px] left-0 text-center bg-[#1C1C24] max-h-[889px] min-h-[889px] shrink-0">
       <Image
         className="w-[100px] mt-[32.34px] m-auto h-[100px] rounded-full"
         src={avatar}

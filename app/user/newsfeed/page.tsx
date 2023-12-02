@@ -1,10 +1,19 @@
-import { getAllNewsFeed } from "@/Utility/GetAllNewsFeed";
+import NewsFeedCard from "@/components/NewsFeed/NewsFeedCard";
+import Header from "@/components/user/Header";
+import MaxWidthContainer from "@/components/user/MaxWidthContainer";
+import SideBar from "@/components/user/SideBar";
 import React from "react";
 
-const NewsFeed =async () => {
- const allNewsFeed= await getAllNewsFeed();
-console.log(allNewsFeed)
-  return <div>NewsFeed</div>;
+const NewsFeed = async () => {
+  return (
+    <MaxWidthContainer>
+      <Header />
+      <div className="flex  w-full">
+        <SideBar />
+        <NewsFeedCard />
+      </div>
+    </MaxWidthContainer>
+  );
 };
 
 export default NewsFeed;
