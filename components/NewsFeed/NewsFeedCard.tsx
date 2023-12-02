@@ -8,37 +8,38 @@ import Link from "next/link";
 import { Skeleton } from "../ui/skeleton";
 
 const NewsFeedCard = () => {
-  const { data, isLoading } = useGetAllNewsFeedQuery();
+  const { data, isLoading } = useGetAllNewsFeedQuery(null);
 
   return (
     <MaxWidthContainer>
-     {isLoading && 
-     <div className="grid grid-cols-4 w-full p-5 gap-[30px]">
-      <div className="flex flex-col w-[304px] h-[369px] rounded-md">
-        <Skeleton className="h-[232px] w-[100%] bg-gray-700" />
-        <Skeleton className="h-[20px] w-[100%] mt-5 bg-gray-700" />
-        <Skeleton className="h-[10px] w-[100%] mt-5 bg-gray-700" />
-        <Skeleton className="h-[40px] w-[100px] mt-5 bg-gray-700" />
-      </div>
-      <div className="flex flex-col w-[304px] h-[369px] rounded-md">
-        <Skeleton className="h-[232px] w-[100%] bg-gray-700" />
-        <Skeleton className="h-[20px] w-[100%] mt-5 bg-gray-700" />
-        <Skeleton className="h-[10px] w-[100%] mt-5 bg-gray-700" />
-        <Skeleton className="h-[40px] w-[100px] mt-5 bg-gray-700" />
-      </div>
-      <div className="flex flex-col w-[304px] h-[369px] rounded-md">
-        <Skeleton className="h-[232px] w-[100%] bg-gray-700" />
-        <Skeleton className="h-[20px] w-[100%] mt-5 bg-gray-700" />
-        <Skeleton className="h-[10px] w-[100%] mt-5 bg-gray-700" />
-        <Skeleton className="h-[40px] w-[100px] mt-5 bg-gray-700" />
-      </div>
-      <div className="flex flex-col w-[304px] h-[369px] rounded-md">
-        <Skeleton className="h-[232px] w-[100%] bg-gray-700" />
-        <Skeleton className="h-[20px] w-[100%] mt-5 bg-gray-700" />
-        <Skeleton className="h-[10px] w-[100%] mt-5 bg-gray-700" />
-        <Skeleton className="h-[40px] w-[100px] mt-5 bg-gray-700" />
-      </div>
-    </div>}
+      {isLoading && (
+        <div className="grid grid-cols-4 w-full p-5 gap-[30px]">
+          <div className="flex flex-col w-[304px] h-[369px] rounded-md">
+            <Skeleton className="h-[232px] w-[100%] bg-gray-700" />
+            <Skeleton className="h-[20px] w-[100%] mt-5 bg-gray-700" />
+            <Skeleton className="h-[10px] w-[100%] mt-5 bg-gray-700" />
+            <Skeleton className="h-[40px] w-[100px] mt-5 bg-gray-700" />
+          </div>
+          <div className="flex flex-col w-[304px] h-[369px] rounded-md">
+            <Skeleton className="h-[232px] w-[100%] bg-gray-700" />
+            <Skeleton className="h-[20px] w-[100%] mt-5 bg-gray-700" />
+            <Skeleton className="h-[10px] w-[100%] mt-5 bg-gray-700" />
+            <Skeleton className="h-[40px] w-[100px] mt-5 bg-gray-700" />
+          </div>
+          <div className="flex flex-col w-[304px] h-[369px] rounded-md">
+            <Skeleton className="h-[232px] w-[100%] bg-gray-700" />
+            <Skeleton className="h-[20px] w-[100%] mt-5 bg-gray-700" />
+            <Skeleton className="h-[10px] w-[100%] mt-5 bg-gray-700" />
+            <Skeleton className="h-[40px] w-[100px] mt-5 bg-gray-700" />
+          </div>
+          <div className="flex flex-col w-[304px] h-[369px] rounded-md">
+            <Skeleton className="h-[232px] w-[100%] bg-gray-700" />
+            <Skeleton className="h-[20px] w-[100%] mt-5 bg-gray-700" />
+            <Skeleton className="h-[10px] w-[100%] mt-5 bg-gray-700" />
+            <Skeleton className="h-[40px] w-[100px] mt-5 bg-gray-700" />
+          </div>
+        </div>
+      )}
       <div className="grid grid-cols-4 gap-5 p-5">
         {data?.newsfeed?.map((item, i) => {
           return (
