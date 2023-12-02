@@ -41,7 +41,7 @@ const NewsFeedCard = () => {
         </div>
       )}
       <div className="grid grid-cols-4 gap-5 p-5">
-        {data?.newsfeed?.map((item, i) => {
+        {data?.newsfeed?.map((item: any, i: number) => {
           return (
             <div
               key={i}

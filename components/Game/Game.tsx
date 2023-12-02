@@ -82,8 +82,8 @@ const Game = () => {
       )}
       <div className="grid grid-cols-4 p-5 w-full">
         {data?.game
-          ?.filter((item) => item?.type === "tournament")
-          ?.map((item, i) => {
+          ?.filter((item: any) => item?.type === "tournament")
+          ?.map((item: any, i: number) => {
             return (
               <GameCard
                 key={i}
