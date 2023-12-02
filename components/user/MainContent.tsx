@@ -30,7 +30,7 @@ const MainContent = ({ session }: any) => {
       bigLeague: tourImg2,
     },
   ];
-  const { data, isLoading } = useSingleUserQuery(session?.user?.email);
+  const { data, isLoading } = useSingleUserQuery<any>(session?.user?.email);
   console.log(data);
   return (
     <MaxWidthContainer className="w-[1350px] max-h-full bg-[#13131A] px-[40px] pt-[49px]">
