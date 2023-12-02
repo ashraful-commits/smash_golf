@@ -92,3 +92,12 @@ export type singleInvoice = {
 export type InvoiceType = {
   data: singleInvoice;
 };
+export type NewsData= {
+  newsfeed: {
+    photo: string;
+    title: string;
+    desc: string;
+    // Add other properties as needed
+  };
+  // Add other properties as needed
+}

@@ -1,4 +1,5 @@
 "use client"
+import { NewsData } from "@/Types";
 import { Skeleton } from "@/components/ui/skeleton";
 import Header from "@/components/user/Header";
 import MaxWidthContainer from "@/components/user/MaxWidthContainer";
@@ -11,8 +12,8 @@ import React from "react";
 
 const SingleNewsFeed = () => {
   const {id} = useParams()
-const {data,isLoading} =useGetSingleNewsQuery(id)
-console.log(data)
+const {data,isLoading} =useGetSingleNewsQuery<NewsData>(id)
+
   return <MaxWidthContainer>
     <Header/>
     <>
