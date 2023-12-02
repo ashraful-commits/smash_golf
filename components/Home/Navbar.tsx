@@ -61,7 +61,7 @@ const Navbar = ({ session }: any) => {
       setStickyHeader(35);
     }
   }, [scrollY]);
-  const { data } = useSingleUserQuery(session?.user?.email);
+  const { data } = useSingleUserQuery<any>(session?.user?.email);
   return (
     <MaxWidthContainer
       className={`w-[1440px] transition-all sticky duration-500 ease-in-out  z-[9999999] px-[100px] m-auto !top-[${stickyHeader}px] left-0  h-[98px] min-w-[1440px] ${
