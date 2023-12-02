@@ -6,7 +6,7 @@ import { useGetAllGameQuery } from "@/lib/feature/GameSlice";
 import { Skeleton } from "../ui/skeleton";
 
 const Game = () => {
-  const { data, isLoading } = useGetAllGameQuery(null);
+  const { data, isLoading } = useGetAllGameQuery<any>(null);
 
   return (
     <MaxWidthContainer>

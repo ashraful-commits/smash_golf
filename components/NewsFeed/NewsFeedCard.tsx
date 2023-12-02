@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Skeleton } from "../ui/skeleton";
 
 const NewsFeedCard = () => {
-  const { data, isLoading } = useGetAllNewsFeedQuery(null);
+  const { data, isLoading } = useGetAllNewsFeedQuery<any>(null);
 
   return (
     <MaxWidthContainer>
