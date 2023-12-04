@@ -5,7 +5,7 @@ import eventOverlay from "@/public/eventOverlay.png";
 import { eventType } from "@/Types";
 const UpComingEvent = ({ tourImg, date, time, title, Participant }:eventType) => {
   return (
-    <div className="w-[304px] relative z-0 h-[325px] rounded-tr-[20px] rounded-tl-[20px] overflow-hidden shrink-0 bg-[#1c1c24]">
+    <div className="w-[304px]  hover:scale-105 transition-all duration-500 relative z-0 h-[325px] rounded-tr-[20px] rounded-tl-[20px] overflow-hidden shrink-0 bg-[#1c1c24]">
       <div className=" overflow-hidden w-full h-full absolute top-0 left-0 z-10">
         <Image
           alt="content"

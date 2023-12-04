@@ -45,7 +45,7 @@ const NewsFeedCard = () => {
           return (
             <div
               key={i}
-              className="bg-gray-900  h-80 overflow-hidden p-3 rounded-lg "
+              className="bg-gray-900  hover:scale-105 transition-all duration-500 h-80 overflow-hidden p-3 rounded-lg "
             >
               <Image
                 width={350}

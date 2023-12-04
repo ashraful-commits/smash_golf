@@ -6,7 +6,7 @@ import { howItWork } from "@/Types";
 import bgMainImg from "@/public/howItworkCardBg.png";
 const HowItWorkCard = ({ cardImg, title, desc, bgImg }: howItWork) => {
   return (
-    <MaxWidthContainer className="w-[340px] bg-black">
+    <MaxWidthContainer className="w-[340px]  hover:scale-105 transition-all duration-500 bg-black">
       <Card className="bg-black border-none  hover:scale-105 transition-all duration-500 hover:border-[2px] border-gray-100 z-0 w-full">
         <div className="w-[310.600px] h-[310.600px] relative z-10 flex justify-center items-center">
           <div

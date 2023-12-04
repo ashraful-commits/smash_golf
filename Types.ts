@@ -5,8 +5,8 @@ export type NavItemProps = {
   NavItems: {
     path: string;
     name: string;
-  }[],
-  role:string
+  }[];
+  role: string;
 };
 
 export type UpcomingGameProps = {
@@ -92,12 +92,10 @@ export type singleInvoice = {
 export type InvoiceType = {
   data: singleInvoice;
 };
-export type NewsData= {
+export type NewsData = {
   newsfeed: {
     photo: string;
     title: string;
     desc: string;
-    // Add other properties as needed
   };
-  // Add other properties as needed
-}
+};

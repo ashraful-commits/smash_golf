@@ -11,7 +11,7 @@ export const UpcomingTournament = ({
   Participant,
 }: UpcomingType) => {
   return (
-    <div className="w-[304px] h-[369px] rounded-[20px] overflow-hidden shrink-0 bg-[#1c1c24]">
+    <div className="w-[304px] hover:scale-105 transition-all duration-500 h-[369px] rounded-[20px] overflow-hidden shrink-0 bg-[#1c1c24]">
       <div className="">
         <div className=" overflow-hidden w-full h-[232px]">
           <Image

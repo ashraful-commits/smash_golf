@@ -4,7 +4,7 @@ import React from "react";
 
 const MostPopularGam = ({ title, tourImg }: MostPopularType) => {
   return (
-    <div className="w-[304px] relative z-0 h-[249px] rounded-[20px] overflow-hidden shrink-0 bg-[#1c1c24] border-[3px] border-[#21214a]">
+    <div className="w-[304px]  hover:scale-105 transition-all duration-500 relative z-0 h-[249px] rounded-[20px] overflow-hidden shrink-0 bg-[#1c1c24] border-[3px] border-[#21214a]">
       <div className=" overflow-hidden w-full h-[200px] absolute top-0 left-0 z-10">
         <Image
           alt="content"

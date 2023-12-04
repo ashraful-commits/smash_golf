@@ -11,7 +11,7 @@ const AchievementCard = ({
   left,
 }: AchievementType) => {
   return (
-    <div className="w-[292px] flex justify-center items-center h-[204px] overflow-hidden rounded-[20px]  bg-gradient-to-r from-gray-600 to-red-800">
+    <div className="w-[292px] hover:scale-105 transition-all duration-500 flex justify-center items-center h-[204px] overflow-hidden rounded-[20px]  bg-gradient-to-r from-gray-600 to-red-800">
       <div className="m-[1px] w-[99%] px-[20px] py-[24px] rounded-[20px] h-[99%] bg-gradient-to-r from-gray-700 to-gray-800">
         <div className="flex gap-[16px] ">
           <span className="text-white p-1 rounded-md px-2 font-['Poppins'] font-[500] text-[13px] bg-black flex justify-center items-center gap-2">

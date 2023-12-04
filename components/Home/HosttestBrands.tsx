@@ -19,7 +19,7 @@ const HosttestBrands = () => {
       /> */}
       <div className="w-full  h-full relative z-[50] flex  items-center flex-col">
         <h4 className="text-center w-full mt-[65px] ml-[140px]  font-['Russo_one'] font-[400] leading-[120%] uppercase bg-clip-text bg-gradient-to-b from-[#ffa500] to-[#b87802] text-[30px] text-transparent  tracking-[-1.2px]">
-          rEEDEM SMASH CASH FOR GOLF’S HOTTEST BRANDS
+          REEDEM SMASH CASH FOR GOLF’S HOTTEST BRANDS
         </h4>
       </div>
       <div className="brands mt-[45px] w-full h-full flex relative z-[50] justify-end gap-[42px] px-[70px]">

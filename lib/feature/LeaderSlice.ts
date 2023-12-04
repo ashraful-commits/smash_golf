@@ -6,22 +6,6 @@ const LeaderSlice = HomeSlice.injectEndpoints({
       query: (email: string) => `/api/leader/${email}`,
       providesTags: ["Leader"],
     }),
-    // createUser: builder.mutation({
-    //   query: (data) => ({
-    //     url: "api/v1/auth/register",
-    //     method: "POST",
-    //     body: data,
-    //   }),
-    //   invalidatesTags: ["Teams"],
-    // }),
-    // deleteUser: builder.mutation({
-    //   query: (id) => ({
-    //     url: `api/v1/auth/${id}`,
-    //     method: "DELETE",
-    //     credentials: "include",
-    //   }),
-    //   invalidatesTags: ["Teams"],
-    // }),
   }),
 });
 export const { useSingleLeaderQuery } = LeaderSlice;
