@@ -1,14 +1,19 @@
-import Header from "@/components/user/Header";
+import Header from "@/components/leader/Header";
+import MainContainer from "@/components/leader/MainContainer";
 import MaxWidthContainer from "@/components/user/MaxWidthContainer";
-import SideBar from "@/components/user/SideBar";
+import { Metadata } from "next";
 import React from "react";
-
-const LeaderBoard = () => {
-  return <MaxWidthContainer><Header/>
-  <div className="flex relative">
-  <SideBar/>
-  <MaxWidthContainer>LeaderBoard</MaxWidthContainer>
-  </div></MaxWidthContainer>;
+export const metadata: Metadata = {
+  title: "Leader",
+  description: "play. compete. win",
+};
+const Leader = () => {
+  return (
+    <MaxWidthContainer>
+      <Header />
+      <MainContainer />
+    </MaxWidthContainer>
+  );
 };
 
-export default LeaderBoard;
+export default Leader;

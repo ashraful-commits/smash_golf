@@ -12,11 +12,6 @@ import { Button } from "../ui/button";
 const HosttestBrands = () => {
   return (
     <MaxWidthContainer className="w-full min-h-[375px] overflow-hidden z-0 relative px-[80px] bg-gradient-to-r from-gray-900 to-black">
-      {/* <Image
-        className="w-full z-[10] h-full object-cover absolute top-0 left-0"
-        src={hosttestBarndbg}
-        alt="hosttest brand bg"
-      /> */}
       <div className="w-full  h-full relative z-[50] flex  items-center flex-col">
         <h4 className="text-center w-full mt-[65px] ml-[140px]  font-['Russo_one'] font-[400] leading-[120%] uppercase bg-clip-text bg-gradient-to-b from-[#ffa500] to-[#b87802] text-[30px] text-transparent  tracking-[-1.2px]">
           REEDEM SMASH CASH FOR GOLF’S HOTTEST BRANDS

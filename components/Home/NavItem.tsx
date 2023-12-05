@@ -17,12 +17,7 @@ const NavItem = ({ NavItems, role }: NavItemProps) => {
   };
   return (
     <ul className="flex gap-x-[26px]">
-      {NavItems.filter(
-        (item) =>
-          (item.name !== "Leaderboard" && role === "user") ||
-          (item.name !== "Userboard" && role === "admin") ||
-          (!role && item.name !== "Leaderboard" && item.name !== "Userboard")
-      ).map((item, i) => {
+      {NavItems.map((item, i) => {
         return (
           <li
             key={i}

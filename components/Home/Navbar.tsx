@@ -26,10 +26,7 @@ const Navbar = ({ session }: any) => {
       path: `${session ? `/user` : "/signin"}`,
       name: "Userboard",
     },
-    {
-      path: `${session ? `/leader` : "/signin"}`,
-      name: "Leaderboard",
-    },
+
     {
       path: "/contact",
       name: "Contact",
@@ -41,7 +38,6 @@ const Navbar = ({ session }: any) => {
   ];
   //==============================
   const [scrollY, setScrollY] = useState(0);
-  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +54,9 @@ const Navbar = ({ session }: any) => {
   const { data } = useSingleUserQuery<any>(session?.user?.email);
   return (
     <MaxWidthContainer
-      className={`w-[1440px] transition-all sticky duration-500 ease-in-out  z-[9999999] px-[100px] m-auto ${scrollY>0 ? "top-0":"top-[35px]"}  left-0  h-[98px] min-w-[1440px] ${
+      className={`w-[1440px] transition-all sticky duration-500 ease-in-out  z-[9999999] px-[100px] m-auto ${
+        scrollY > 0 ? "top-0" : "top-[35px]"
+      }  left-0  h-[98px] min-w-[1440px] ${
         scrollY === 0 ? " bg-transparent" : "bg-gray-900 bg-opacity-90"
       }`}
     >
