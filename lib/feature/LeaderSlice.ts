@@ -3,7 +3,7 @@ import HomeSlice from "./HomeSlice";
 const LeaderSlice = HomeSlice.injectEndpoints({
   endpoints: (builder: any) => ({
     singleLeader: builder.query({
-      query: (email: string) => `/api/leader/${email}`,
+      query: () => '/api/leader',
       providesTags: ["Leader"],
     }),
   }),

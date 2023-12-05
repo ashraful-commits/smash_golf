@@ -5,8 +5,6 @@ import avatar from "@/public/avatar.png";
 import Achievements from "./Achievements";
 import InviteFriend from "./InviteFriend";
 import TableComponent from "./TableComponent";
-import { InvoiceType, singleInvoice } from "@/Types";
-import { useSingleLeaderQuery } from "@/lib/feature/LeaderSlice";
 
 const MainContent = ({ session }: any) => {
   const invoices = [

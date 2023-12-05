@@ -93,7 +93,7 @@ const SideBar = () => {
     setActiveLi(pathName);
   }, [pathName]);
   return (
-    <MaxWidthContainer className="w-[250px] sticky top-[70px] left-0 text-center bg-[#1C1C24] max-h-[889px] min-h-[889px] shrink-0">
+    <MaxWidthContainer className="w-[250px] sticky top-[70px] z-[99999999] left-0 text-center bg-[#1C1C24] max-h-[889px] min-h-[889px] shrink-0">
       <Image
         className="w-[100px] mt-[32.34px] m-auto h-[100px] rounded-full"
         src={avatar}
