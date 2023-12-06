@@ -5,6 +5,9 @@ import MainContainer from "@/components/user/MainContainer";
 import { getServerSession } from "next-auth";
 import { options } from "../api/auth/[...nextauth]/options";
 
+import { Metadata } from "next";
+import { userSessionType } from "@/Types";
+
 
 const User = () => {
 
@@ -18,10 +21,19 @@ const User = () => {
 export default User;
 
 
-export async function generateMetadata (){
-  const session = await getServerSession(options)
+export async function generateMetadata(): Promise<Metadata> {
+  const session: userSessionType | null = await getServerSession(options)!;
+
+  if (!session) {
+    // Handle the case when session is null
+    return {
+      title: 'Unknown User',
+      description: 'play. compete. win',
+    };
+  }
+
   return {
-    title: `user-${session?.user?.name}`,
-    description: "play. compete. win",
+    title: `user-${session.user.name}`,
+    description: 'play. compete. win',
   };
 }

@@ -99,3 +99,10 @@ export type NewsData = {
     desc: string;
   };
 };
+export type userSessionType = {
+  user: {
+    name: string;
+    email: string;
+    image: undefined|StaticImageData;
+  };
+};
