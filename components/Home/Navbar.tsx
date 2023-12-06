@@ -36,7 +36,7 @@ const Navbar = ({ session }: any) => {
       name: `${session ? "Logout" : "Register"}`,
     },
   ];
-  //==============================
+
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {

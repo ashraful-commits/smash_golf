@@ -1,6 +1,5 @@
 import React from "react";
 import MaxWidthContainer from "./MaxWidthContainer";
-import hosttestBarndbg from "@/public/hosttestBrangbg.png";
 import brand1 from "@/public/brand1.png";
 import brand2 from "@/public/brand2.png";
 import brand3 from "@/public/brand3.png";
@@ -9,7 +8,28 @@ import brand5 from "@/public/brand5.png";
 import brand6 from "@/public/brand6.png";
 import Image from "next/image";
 import { Button } from "../ui/button";
-const HosttestBrands = () => {
+const HottestBrands = () => {
+  const allBrand=[
+    {
+      logo:brand1
+    },
+    {
+      logo:brand2
+    },
+    
+    {
+      logo:brand3
+    },
+    {
+      logo:brand4
+    },
+    {
+      logo:brand5
+    },
+    {
+      logo:brand6
+    },
+  ]
   return (
     <MaxWidthContainer className="w-full min-h-[375px] overflow-hidden z-0 relative px-[80px] bg-gradient-to-r from-gray-900 to-black">
       <div className="w-full  h-full relative z-[50] flex  items-center flex-col">
@@ -18,36 +38,15 @@ const HosttestBrands = () => {
         </h4>
       </div>
       <div className="brands mt-[45px] w-full h-full flex relative z-[50] justify-end gap-[42px] px-[70px]">
-        <Image
-          className="w-auto hover:scale-105 duration-500 ease-in-out h-auto"
-          src={brand1}
-          alt="brand1"
-        />
-        <Image
-          className="w-auto hover:scale-105 duration-500 ease-in-out h-auto"
-          src={brand2}
-          alt="brand2"
-        />
-        <Image
-          className="w-auto hover:scale-105 duration-500 ease-in-out h-auto"
-          src={brand3}
-          alt="brand3"
-        />
-        <Image
-          className="w-auto hover:scale-105 duration-500 ease-in-out h-auto"
-          src={brand4}
-          alt="brand4"
-        />
-        <Image
-          className="w-auto hover:scale-105 duration-500 ease-in-out h-auto"
-          src={brand5}
-          alt="brand5"
-        />
-        <Image
-          className="w-auto hover:scale-105 duration-500 ease-in-out h-auto"
-          src={brand6}
-          alt="brand6"
-        />
+       {allBrand?.map((item,i)=>{
+        return <Image key={i}
+           className="w-auto hover:scale-105 duration-500 ease-in-out h-auto"
+           src={item?.logo}
+           alt="brand1"
+         />
+
+       })}
+        
       </div>
       <Button className="font-['Russo_one'] hover:scale-105 duration-500 ease-in-out transition-all text-center w-[190px] h-[50px] ml-32 bg-[#3f83f8] shrink-0 relative z-[50] mt-[45px] ">
         Shop now
@@ -56,4 +55,4 @@ const HosttestBrands = () => {
   );
 };
 
-export default HosttestBrands;
+export default HottestBrands;

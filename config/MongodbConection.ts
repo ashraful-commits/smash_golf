@@ -9,7 +9,6 @@ export const MongoDbConection = async () => {
     }
 
     await mongoose.connect(mongoUrl);
-    console.log("Mongodb connected");
   } catch (error) {
     console.log(error);
   }

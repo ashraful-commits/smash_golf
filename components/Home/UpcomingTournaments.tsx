@@ -11,6 +11,38 @@ import gameImg1 from "@/public/gameImg1.png";
 import gameImg2 from "@/public/gameImg2.png";
 import hostImg from "@/public/HostImg.png";
 const UpcomingTournaments = () => {
+  const upcommingTournament=[
+   { 
+    hostImg:hostImg,
+username:"Milca01",
+time:"Oct 31. 11:00 AM",
+gameImg:gameImg,
+entry:"Free Entry",
+title:"Metagoons Fornit Tournament",
+styles:"text-[#FD3BBB]",
+reward:"100USD",
+entryNum:"Closest-To-The-Pin",},
+   { 
+    hostImg:hostImg,
+username:"Milca01",
+time:"Oct 31. 11:00 AM",
+gameImg:gameImg1,
+entry:"Free Entry",
+title:"Metagoons Fornit Tournament",
+styles:"text-[#FFB800]",
+reward:"100USD",
+entryNum:21},
+   { 
+    hostImg:hostImg,
+username:"Milca01",
+time:"Oct 31. 11:00 AM",
+gameImg:gameImg2,
+entry:"Free Entry",
+title:"Metagoons Fornit Tournament",
+styles:"text-[#1FD2F1]",
+reward:"100USD",
+entryNum:"Longest Drive",},
+  ]
   return (
     <MaxWidthContainer className="min-h-1093px  overflow-hidden z-0 ">
       <div className="bgImg relative top-0 left-0 w-full  h-full z-10 overflow-hidden">
@@ -42,39 +74,21 @@ const UpcomingTournaments = () => {
             </p>
           </div>
           <div className="tornaments mt-[48px] grid grid-flow-col gap-[5px] w-full h-full px-[95px]">
-            <UpcomingGame
-              hostImg={hostImg}
-              username="Milca01"
-              time={"Oct 31. 11:00 AM"}
-              gameImg={gameImg}
-              entry="Free Entry"
-              title="Metagoons Fornit Tournament"
-              styles="text-[#FD3BBB]"
-              reward={"100USD"}
-              entryNum="Closest-To-The-Pin"
-            />
-            <UpcomingGame
-              hostImg={hostImg}
-              username="Milca01"
-              time={"Oct 31. 11:00 AM"}
-              gameImg={gameImg1}
-              entry="Free Entry"
-              title="Metagoons Fornite Tournament"
-              styles="text-[#FFB800]"
-              reward={"100USD"}
-              entryNum={21}
-            />
-            <UpcomingGame
-              hostImg={hostImg}
-              username="Milca01"
-              time={"Oct 31. 11:00 AM"}
-              gameImg={gameImg2}
-              entry="Free Entry"
-              title="Metagoons Fornit Tournament"
-              styles="text-[#1FD2F1]"
-              reward={"100USD"}
-              entryNum="Longest Drive"
-            />
+          
+          {upcommingTournament?.map((item,i)=>{
+              return <UpcomingGame key={i}
+              hostImg={item?.hostImg}
+              username={item?.username}
+              time={item?.time}
+              gameImg={item?.gameImg}
+              entry={item?.entry}
+              title={item?.title}
+              styles={item?.styles}
+              reward={item?.reward}
+              entryNum={item?.entryNum}
+              />
+          })}
+          
           </div>
         </div>
       </div>

@@ -5,6 +5,17 @@ import liveEventB from "@/public/liveEvent1.png";
 import liveEventB2 from "@/public/liveEvent2.png";
 import liveEventB3 from "@/public/liveEvent3.png";
 const LiveEvent = () => {
+  const LiveEvent =[
+    {
+      Photo:liveEventB
+    },
+    {
+      Photo:liveEventB2
+    },
+    {
+      Photo:liveEventB3
+    },
+  ]
   return (
     <MaxWidthContainer className=" min-h-screen bg-black">
       <div className="w-full h-full">
@@ -21,9 +32,11 @@ const LiveEvent = () => {
           </a>
         </p>
         <div className="liveEvent flex mt-[50px] px-[80px]">
-          <LiveEventCard liveEventBanner={liveEventB} />
-          <LiveEventCard liveEventBanner={liveEventB2} />
-          <LiveEventCard liveEventBanner={liveEventB3} />
+          {LiveEvent.map((item,i)=>{
+            return  <LiveEventCard key={i} liveEventBanner={item.Photo} />
+          })}
+         
+         
         </div>
       </div>
     </MaxWidthContainer>

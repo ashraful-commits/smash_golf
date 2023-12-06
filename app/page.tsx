@@ -1,6 +1,6 @@
 import Footer from "@/components/Home/Footer";
 import Hero from "@/components/Home/Hero";
-import HosttestBrands from "@/components/Home/HosttestBrands";
+
 import HowItWork from "@/components/Home/HowItWork";
 
 import HowToPlay from "@/components/Home/HowToPlay";
@@ -12,6 +12,7 @@ import UpcomingTournaments from "@/components/Home/UpcomingTournaments";
 import WhyStart from "@/components/Home/WhyStart";
 import { getServerSession } from "next-auth";
 import { options } from "./api/auth/[...nextauth]/options";
+import HottestBrands from "@/components/Home/HottestBrands";
 
 export default async function Home() {
   const session = await getServerSession(options);
@@ -28,7 +29,7 @@ export default async function Home() {
         <div className="bg-black h-[110px] w-full"></div>
         <HowToPlay />
         <LiveEvent />
-        <HosttestBrands />
+        <HottestBrands />
         <Footer />
       </div>
     </MaxWidthContainer>
