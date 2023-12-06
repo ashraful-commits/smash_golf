@@ -1,5 +1,5 @@
 "use client";
-import { NewsData } from "@/Types";
+
 import { Skeleton } from "@/components/ui/skeleton";
 import Header from "@/components/user/Header";
 import MaxWidthContainer from "@/components/user/MaxWidthContainer";
